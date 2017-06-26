@@ -1,7 +1,10 @@
 package software.neocortex.model;
 
-/**
- * Created by Администратор on 26.06.2017.
- */
+import javax.persistence.*;
+
+@Entity
+@Table(name = "flightdata")
 public class FlightDepartment {
+
+
 }
