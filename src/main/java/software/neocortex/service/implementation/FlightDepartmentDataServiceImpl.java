@@ -20,24 +20,24 @@ public class FlightDepartmentDataServiceImpl implements FlightDepartmentDataServ
     @Override
     @Transactional
     public void addFlightDepartmentData(FlightDepartmentData flightDepartmentData) {
-
+        this.flightDepartmentDAO.addFlightDepartmentData(flightDepartmentData);
     }
 
     @Override
     @Transactional
     public void updateFlightDepartmentData(FlightDepartmentData flightDepartmentData) {
-
+        this.flightDepartmentDAO.updateFlightDepartmentData(flightDepartmentData);
     }
 
     @Override
     @Transactional
     public FlightDepartmentData getFlightDepartmentDataById(int id) {
-        return null;
+        return this.flightDepartmentDAO.getFlightDepartmentDataById(id);
     }
 
     @Override
     @Transactional
     public List<FlightDepartmentData> listFlightDepartmentData() {
-        return null;
+        return this.flightDepartmentDAO.listFlightDepartmentData();
     }
 }
