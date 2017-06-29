@@ -40,7 +40,7 @@ public class FlightDepartmentController {
         return "redirect:/flightdata";
     }
 
-    @RequestMapping("edit/{id}")
+    @RequestMapping("editevent/{id}")
     public String editFlightDepartmentData(@PathVariable("id") int id, Model model) {
         model.addAttribute("flightDepartmentData", this.flightDepartmentDataService.getFlightDepartmentDataById(id));
         model.addAttribute("listFlightDepartmentData", this.flightDepartmentDataService.listFlightDepartmentData());

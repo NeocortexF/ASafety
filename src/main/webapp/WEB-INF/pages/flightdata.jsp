@@ -68,7 +68,7 @@
                 <td><a href="/fdinfo/${data.id}" target="_blank">${data.incomingNumber}</a></td>
                 <td>${data.flightNumber}</td>
                 <td>${data.tailNumber}</td>
-                <td><a href="<c:url value='/edit/${data.id}'/>">Edit</a></td>
+                <td><a href="<c:url value='/editevent/${data.id}'/>">Edit</a></td>
             </tr>
         </c:forEach>
     </table>
@@ -128,7 +128,7 @@
             <td colspan="2">
                 <c:if test="${!empty flightDepartmentData.incomingNumber}">
                     <input type="submit"
-                           value="<spring:message text="Edit Flight Data"/>"/>
+                           value="<spring:message text="Save Flight Data"/>"/>
                 </c:if>
                 <c:if test="${empty flightDepartmentData.incomingNumber}">
                     <input type="submit"

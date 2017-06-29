@@ -46,11 +46,17 @@ public class FlightDepartmentDaoImpl implements FlightDepartmentDAO {
         return flightDepartmentData;
     }
 
-    @Override  ///!!! АЛЯРМА!!
+    @Override
     public List<FlightDepartmentData> listFlightDepartmentData() {
         Session session = this.sessionFactory.getCurrentSession();
-        Query query = session.createQuery("select fd.flightdata_id, fd.Incoming_number, fd.Flight_number, fd.Tail_number from flightdata fd");
-        List<FlightDepartmentData> flightDepartmentDataList = query.list();
+
+        //так не работает - похоже нужно маппить объект flightdepartment какой нить именно только с теми полями которые нужны
+        // Query query = session.createQuery("select fd.flightdata_id, fd.Incoming_number, fd.Flight_number, fd.Tail_number from Flightdata fd");
+        // List<FlightDepartmentData> flightDepartmentDataList = query.list();
+
+
+        List<FlightDepartmentData> flightDepartmentDataList = session.createQuery("from FlightDepartmentData").list();
+
         logger.info("Data from database was received successfully by flight department user");
         return flightDepartmentDataList;
     }
