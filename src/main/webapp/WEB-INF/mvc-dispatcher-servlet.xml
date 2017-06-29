@@ -50,6 +50,16 @@
         <property name="bookDao" ref="bookDao"/>
     </bean>
 
+    <!-- Dao and Service beans for FlightDepartment -->
+    <bean id="flightDepartmentDao" class="software.neocortex.dao.implementation.FlightDepartmentDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "flightDepartmentDataService" class="software.neocortex.service.implementation.FlightDepartmentDataServiceImpl">
+        <property name="flightDepartmentDAO" ref="flightDepartmentDao"/>
+    </bean>
+
+    <!-- options -->
     <context:component-scan base-package="software.neocortex"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
