@@ -30,6 +30,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>software.neocortex.model.Book</value>
+                <value>software.neocortex.model.FlightDepartmentData</value>
             </list>
         </property>
         <property name="hibernateProperties">
