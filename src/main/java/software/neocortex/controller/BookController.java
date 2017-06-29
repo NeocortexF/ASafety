@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BookController {
     private BookService bookService;
 
-    @Autowired(required = true)
+    @Autowired
     @Qualifier(value = "bookService")
     public void setBookService(BookService bookService) {
         this.bookService = bookService;
