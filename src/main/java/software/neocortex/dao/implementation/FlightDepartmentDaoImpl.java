@@ -38,6 +38,17 @@ public class FlightDepartmentDaoImpl implements FlightDepartmentDAO {
     }
 
     @Override
+    public void removeFlightDepartmentData(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        FlightDepartmentData flightDepartmentData = (FlightDepartmentData) session.load(FlightDepartmentData.class, new Integer(id));
+
+        if(flightDepartmentData != null) {
+            session.delete(flightDepartmentData);
+        }
+        logger.info("Flight data successfully removed. Data details: " + flightDepartmentData);
+    }
+
+    @Override
     public FlightDepartmentData getFlightDepartmentDataById(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         FlightDepartmentData flightDepartmentData = (FlightDepartmentData) session.load(FlightDepartmentData.class, new Integer(id));
@@ -47,17 +58,12 @@ public class FlightDepartmentDaoImpl implements FlightDepartmentDAO {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<FlightDepartmentData> listFlightDepartmentData() {
         Session session = this.sessionFactory.getCurrentSession();
-
-        //так не работает - похоже нужно маппить объект flightdepartment какой нить именно только с теми полями которые нужны
-        // Query query = session.createQuery("select fd.flightdata_id, fd.Incoming_number, fd.Flight_number, fd.Tail_number from Flightdata fd");
-        // List<FlightDepartmentData> flightDepartmentDataList = query.list();
-
-
         List<FlightDepartmentData> flightDepartmentDataList = session.createQuery("from FlightDepartmentData").list();
-
         logger.info("Data from database was received successfully by flight department user");
+
         return flightDepartmentDataList;
     }
 }

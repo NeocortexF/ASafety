@@ -10,6 +10,8 @@ public interface FlightDepartmentDataService {
 
     void updateFlightDepartmentData(FlightDepartmentData flightDepartmentData);
 
+    void removeFlightDepartmentData(int id);
+
     FlightDepartmentData getFlightDepartmentDataById(int id);
 
     List<FlightDepartmentData> listFlightDepartmentData();

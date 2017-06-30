@@ -10,8 +10,7 @@ public interface FlightDepartmentDAO {
 
     void updateFlightDepartmentData(FlightDepartmentData flightDepartmentData);
 
-    //FD не может удалять данные, пока не нужно
-    //void removeFlightDepartmentData(FlightDepartmentData flightDepartmentData);
+    void removeFlightDepartmentData(int id);
 
     FlightDepartmentData getFlightDepartmentDataById(int id);
 

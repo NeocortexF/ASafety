@@ -31,6 +31,12 @@ public class FlightDepartmentDataServiceImpl implements FlightDepartmentDataServ
 
     @Override
     @Transactional
+    public void removeFlightDepartmentData(int id) {
+        this.flightDepartmentDAO.removeFlightDepartmentData(id);
+    }
+
+    @Override
+    @Transactional
     public FlightDepartmentData getFlightDepartmentDataById(int id) {
         return this.flightDepartmentDAO.getFlightDepartmentDataById(id);
     }
