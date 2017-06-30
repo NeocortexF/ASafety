@@ -69,6 +69,7 @@
                 <td>${data.flightNumber}</td>
                 <td>${data.tailNumber}</td>
                 <td><a href="<c:url value='/editevent/${data.id}'/>">Edit</a></td>
+                <td><f href="<c:url value='/removeevent/${data.id}'/>">Delete</f></td>
             </tr>
         </c:forEach>
     </table>
