@@ -7,8 +7,6 @@
 <body>
 <h3>Здесь будет логин страница</h3>
 <br/>
-<a href="<c:url value="/books"/>" target="_blank">Books list</a>
-<br/>
 <a href="<c:url value="/flightdata"/>" target="_blank">Flight data</a>
 <br/>
 </body>

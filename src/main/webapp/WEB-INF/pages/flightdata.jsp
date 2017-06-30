@@ -68,15 +68,15 @@
                 <td><a href="/fdinfo/${data.id}" target="_blank">${data.incomingNumber}</a></td>
                 <td>${data.flightNumber}</td>
                 <td>${data.tailNumber}</td>
-                <td><a href="<c:url value='/editevent/${data.id}'/>">Edit</a></td>
-                <td><f href="<c:url value='/removeevent/${data.id}'/>">Delete</f></td>
+                <td><a href="<c:url value='/eventedit/${data.id}'/>">Edit</a></td>
+                <td><f href="<c:url value='/eventremove/${data.id}'/>">Delete</f></td>
             </tr>
         </c:forEach>
     </table>
 </c:if>
 
 
-<h1>Add a Book</h1>
+<h1>Add or Edit Flight Data</h1>
 
 <c:url var="addAction" value="/flightdata/add"/>
 

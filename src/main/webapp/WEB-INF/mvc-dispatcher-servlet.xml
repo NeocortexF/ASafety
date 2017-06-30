@@ -18,7 +18,7 @@
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://localhost:3306/bookmanager"/> <!-- !!!!! -->
+                  value="jdbc:mysql://localhost:3306/avia"/>
         <property name="username" value="root"/>
         <property name="password" value="root"/>
     </bean>
@@ -29,7 +29,6 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>software.neocortex.model.Book</value>
                 <value>software.neocortex.model.FlightDepartmentData</value>
             </list>
         </property>
@@ -42,16 +41,7 @@
         </property>
     </bean>
 
-    <!--BookDao and BookService beans-->
-    <bean id="bookDao" class="software.neocortex.dao.implementation.BookDaoImpl">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-
-    <bean id="bookService" class="software.neocortex.service.implementation.BookServiceImpl">
-        <property name="bookDao" ref="bookDao"/>
-    </bean>
-
-    <!-- Dao and Service beans for FlightDepartment -->
+      <!-- Dao and Service beans for FlightDepartment -->
     <bean id="flightDepartmentDao" class="software.neocortex.dao.implementation.FlightDepartmentDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
