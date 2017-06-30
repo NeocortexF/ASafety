@@ -13,6 +13,10 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!-- Web App Resources Allocation -->
+    <mvc:resources mapping="/resources/**" location="/resources/assets/"
+                   cache-period="31556926"/>
+
     <!-- Database Information -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
