@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
@@ -57,19 +58,41 @@
 <c:if test="${!empty listFlightDepartmentData}">
     <table class="tg">
         <tr>
-            <th width="80">ID</th>
-            <th width="120">Incoming number</th>
-            <th width="120">Flight number</th>
-            <th width="120">Tail number</th>
+            <th>ID</th>
+            <th>Вх. №</th>
+            <th>Дата полета</th>
+            <th>№ рейса</th>
+            <th>Взлет</th>
+            <th>Посадка</th>
+            <th>Борт</th>
+            <th>Event</th>
+            <th>КВС</th>
+            <th>ВП</th>
+            <th>PF</th>
+            <th>АЕ</th>
+            <th>КД</th>
+            <th>Индекс риска</th>
+            <th>Закрыт</th>
         </tr>
         <c:forEach items="${listFlightDepartmentData}" var="data">
             <tr>
                 <td>${data.id}</td>
                 <td><a href="/fdinfo/${data.id}" target="_blank">${data.incomingNumber}</a></td>
+                <td>${data.dateOfFlight}</td>
                 <td>${data.flightNumber}</td>
+                <td>${data.departure}</td>
+                <td>${data.arrival}</td>
                 <td>${data.tailNumber}</td>
+                <td>${data.mainEventNumber}</td>
+                <td>${data.pilotInCommand}</td>
+                <td>${data.firstAssistant}</td>
+                <td>${data.pilotFlying}</td>
+                <td>${data.aviaEsquadron}</td>
+                <td>${data.correctiveActionAcceptanceBy}</td>
+                <td>${data.riskIndex}</td>
+                <td>${data.talonClosedBy}</td>
                 <td><a href="<c:url value='/eventedit/${data.id}'/>">Edit</a></td>
-                <td><f href="<c:url value='/eventremove/${data.id}'/>">Delete</f></td>
+            <!--    <td><f href="<c:url value='/eventremove/${data.id}'/>">Delete</f></td> -->
             </tr>
         </c:forEach>
     </table>
