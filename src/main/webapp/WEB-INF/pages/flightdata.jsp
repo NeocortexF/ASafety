@@ -153,11 +153,11 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 <script src="<c:url value="/resources/assets/js/dataTables/dataTables.bootstrap.js" />"></script>
 
 <!-- Что это за хуйня?! -->
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('#dataTables-example').dataTable();
     });
-</script>
+</script> -->
 
 <!-- CUSTOM SCRIPTS -->
 <script src="<c:url value="/resources/assets/js/custom.js" />"></script>
