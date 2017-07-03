@@ -91,13 +91,13 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                             <th>№ рейса</th>
                                             <th>Взлет</th>
                                             <th>Посадка</th>
-                                            <th>Борт</th>
+                                            <th>Бортовой номер</th>
                                             <th>Event</th>
                                             <th>КВС</th>
                                             <th>ВП</th>
                                             <th>PF</th>
                                             <th>АЕ</th>
-                                            <th>КД</th>
+                                            <th>КД одобрены</th>
                                             <th>Индекс риска</th>
                                             <th>Закрыт</th>
                                         </tr>
@@ -123,8 +123,8 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         <!--    <td><a href="<c:url value='/eventedit/${data.id}'/>">Edit</a></td> -->
                                         <!--    <td><f href="<c:url value='/eventremove/${data.id}'/>">Delete</f></td> -->
                                         </tr>
-                                    </tbody>
                                     </c:forEach>
+                                    </tbody>
                                 </table>
                                 </c:if>
                             </div>
@@ -151,7 +151,11 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 <!-- DATA TABLE SCRIPTS -->
 <script type="text/javascript" src="<spring:url value='/resources/assets/js/dataTables/jquery.dataTables.js'/>"></script>
 <script type="text/javascript" src="<spring:url value='/resources/assets/js/dataTables/dataTables.bootstrap.js'/>"></script>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#dataTables-example').dataTable();
+    });
+</script>
 <!-- CUSTOM SCRIPTS -->
 <script type="text/javascript" src="<spring:url value='/resources/assets/js/custom.js'/>"></script>
 
