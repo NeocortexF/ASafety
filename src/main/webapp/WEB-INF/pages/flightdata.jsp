@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aviation Safety Solution</title>
     <!-- BOOTSTRAP STYLES-->
-    <link href="<c:url value="/resources/assets/css/bootstrap.css" />" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/assets/css/bootstrap.css'/>" />
     <!-- FONTAWESOME STYLES-->
-    <link href="<c:url value="/resources/assets/css/font-awesome.css" />" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/assets/css/font-awesome.css'/>" />
     <!-- TABLE STYLES-->
-    <link href="<c:url value="/resources/assets/js/dataTables/dataTables.bootstrap.css" />" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/assets/js/dataTables/dataTables.bootstrap.css'/>" />
     <!-- CUSTOM STYLES-->
-    <link href="<c:url value="/resources/assets/css/custom.css" />" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/assets/css/custom.css'/>" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -143,24 +143,17 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 <!-- /. WRAPPER  -->
 <!-- SCRIPTS - AT THE BOTTOM TO REDUCE THE LOAD TIME-->
 <!-- JQUERY SCRIPTS -->
-<script src="<c:url value="/resources/assets/js/jquery-1.10.2.js" />"></script>
+<script type="text/javascript" src="<spring:url value='/resources/assets/js/jquery-1.10.2.js'/>"></script>
 <!-- BOOTSTRAP SCRIPTS -->
-<script src="<c:url value="/resources/assets/js/bootstrap.min.js" />"></script>
+<script type="text/javascript" src="<spring:url value='/resources/assets/js/bootstrap.min.js'/>"></script>
 <!-- METISMENU SCRIPTS -->
-<script src="<c:url value="/resources/assets/js/jquery.metisMenu.js" />"></script>
+<script type="text/javascript" src="<spring:url value='/resources/assets/js/jquery.metisMenu.js'/>"></script>
 <!-- DATA TABLE SCRIPTS -->
-<script src="<c:url value="/resources/assets/js/dataTables/jquery.dataTables.js" />"></script>
-<script src="<c:url value="/resources/assets/js/dataTables/dataTables.bootstrap.js" />"></script>
-
-<!-- Что это за хуйня?! -->
-<!-- <script>
-    $(document).ready(function () {
-        $('#dataTables-example').dataTable();
-    });
-</script> -->
+<script type="text/javascript" src="<spring:url value='/resources/assets/js/dataTables/jquery.dataTables.js'/>"></script>
+<script type="text/javascript" src="<spring:url value='/resources/assets/js/dataTables/dataTables.bootstrap.js'/>"></script>
 
 <!-- CUSTOM SCRIPTS -->
-<script src="<c:url value="/resources/assets/js/custom.js" />"></script>
+<script type="text/javascript" src="<spring:url value='/resources/assets/js/custom.js'/>"></script>
 
 </body>
 </html>

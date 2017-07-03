@@ -13,10 +13,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- Web App Resources Allocation -->
-    <mvc:resources mapping="/resources/**" location="/resources/assets/"
-                   cache-period="31556926"/>
-
     <!-- Database Information -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
@@ -62,6 +58,10 @@
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
+
+    <!-- Web App Resources Allocation -->
+    <mvc:resources mapping="/resources/**" location="/resources/"
+                   cache-period="31556926"/>
 
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
