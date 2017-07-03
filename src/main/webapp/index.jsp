@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Aviation Safety Solution</title>
+  <title>Flying Base 2</title>
 </head>
 <body>
 <h3>Здесь будет логин страница</h3>

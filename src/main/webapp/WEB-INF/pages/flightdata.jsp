@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviation Safety Solution</title>
+    <title>Flying Base 2</title>
     <!-- BOOTSTRAP STYLES-->
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/assets/css/bootstrap.css'/>" />
     <!-- FONTAWESOME STYLES-->
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Aviation Safety Solution</a>
+            <a class="navbar-brand" href="index.html">Flying Base 2</a>
         </div>
         <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -43,7 +43,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
                 <li class="text-center">
-                    <img src="assets/img/newfb28.png" class="user-image img-responsive"/>
+                    <img src="<spring:url value='/resources/assets/img/newfb28.png'/>" class="user-image img-responsive"/>
                 </li>
                 <li>
                     <a class="active-menu"  href="index.html"><i class="fa fa-table fa-3x"></i>  События</a>
@@ -56,7 +56,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                     </i> Настройки</a>
                 </li>
                 <li>
-                    <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Статистика</a>
+                    <a href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Статистика</a>
                 </li>
             </ul>
         </div>
