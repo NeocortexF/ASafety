@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "flightdata")
-public class FlightProccessingData {
+public class FlightProcessingData {
 
     @Id
     @Column(name = "flightdata_id")
@@ -15,7 +15,7 @@ public class FlightProccessingData {
     private String incomingNumber;
 
     @Column(name = "Date_processing")
-    private String dateOfProccessing;
+    private String dateOfProcessing;
 
     @Column(name = "Date_of_flight")
     private String dateOfFlight;
@@ -39,7 +39,7 @@ public class FlightProccessingData {
     private String secondEventCode;
 
     @Column(name = "Processed_by_gopi")
-    private String proccessedBy;
+    private String processedBy;
 
     @Column(name = "Accepted_by_gopi")
     private String approvedBy;
@@ -60,12 +60,12 @@ public class FlightProccessingData {
         this.incomingNumber = incomingNumber;
     }
 
-    public String getDateOfProccessing() {
-        return dateOfProccessing;
+    public String getDateOfProcessing() {
+        return dateOfProcessing;
     }
 
-    public void setDateOfProccessing(String dateOfProccessing) {
-        this.dateOfProccessing = dateOfProccessing;
+    public void setDateOfProcessing(String dateOfProcessing) {
+        this.dateOfProcessing = dateOfProcessing;
     }
 
     public String getDateOfFlight() {
@@ -124,12 +124,12 @@ public class FlightProccessingData {
         this.secondEventCode = secondEventCode;
     }
 
-    public String getProccessedBy() {
-        return proccessedBy;
+    public String getProcessedBy() {
+        return processedBy;
     }
 
-    public void setProccessedBy(String proccessedBy) {
-        this.proccessedBy = proccessedBy;
+    public void setProcessedBy(String processedBy) {
+        this.processedBy = processedBy;
     }
 
     public String getApprovedBy() {
@@ -142,10 +142,10 @@ public class FlightProccessingData {
 
     @Override
     public String toString() {
-        return "FlightProccessingData{" +
+        return "FlightProcessingData{" +
                 "id=" + id +
                 ", incomingNumber='" + incomingNumber + '\'' +
-                ", dateOfProccessing='" + dateOfProccessing + '\'' +
+                ", dateOfProcessing='" + dateOfProcessing + '\'' +
                 ", dateOfFlight='" + dateOfFlight + '\'' +
                 ", flightNumber='" + flightNumber + '\'' +
                 ", departure='" + departure + '\'' +
@@ -153,7 +153,7 @@ public class FlightProccessingData {
                 ", tailNumber='" + tailNumber + '\'' +
                 ", firstEventCode='" + firstEventCode + '\'' +
                 ", secondEventCode='" + secondEventCode + '\'' +
-                ", proccessedBy='" + proccessedBy + '\'' +
+                ", processedBy='" + processedBy + '\'' +
                 ", approvedBy='" + approvedBy + '\'' +
                 '}';
     }
