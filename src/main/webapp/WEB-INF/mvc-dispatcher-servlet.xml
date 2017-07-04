@@ -41,7 +41,9 @@
         </property>
     </bean>
 
-      <!-- Dao and Service beans for FlightDepartment -->
+    <!-- ============================== BEANS ==================================== -->
+
+    <!-- Dao and Service beans for FlightDepartment -->
     <bean id="flightDepartmentDao" class="software.neocortex.dao.implementation.FlightDepartmentDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
@@ -49,6 +51,25 @@
     <bean id = "flightDepartmentDataService" class="software.neocortex.service.implementation.FlightDepartmentDataServiceImpl">
         <property name="flightDepartmentDAO" ref="flightDepartmentDao"/>
     </bean>
+
+    <!-- Dao and Service beans for Aviasquadrons -->
+    <bean id="aviasquadronDao" class="software.neocortex.dao.implementation.AviasquadronDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "aviasquadronDataService" class="software.neocortex.service.implementation.AviasquandronDataServiceImpl">
+        <property name="aviasquadronDAO" ref="aviasquadronDao"/>
+    </bean>
+
+    <!-- Dao and Service beans for Flight Processing Engineering  -->
+    <bean id="flightProcessingDao" class="software.neocortex.dao.implementation.FlightProcessingDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "flightProcessingDataService" class="software.neocortex.service.implementation.FlightProcessingDataServiceImpl">
+        <property name="flightProcessingDAO" ref="flightProcessingDao"/>
+    </bean>
+    <!-- ======================================================================== -->
 
     <!-- options -->
     <context:component-scan base-package="software.neocortex"/>
