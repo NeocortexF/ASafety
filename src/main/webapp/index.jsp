@@ -9,5 +9,8 @@
 <br/>
 <a href="<c:url value="/flightdata"/>" target="_blank">Flight data</a>
 <br/>
+<a href="<c:url value="/squadrondata"/>" target="_blank">Squadron data</a>
+<br/>
+<a href="<c:url value="/processdata"/>" target="_blank">Engineering data</a>
 </body>
 </html>
