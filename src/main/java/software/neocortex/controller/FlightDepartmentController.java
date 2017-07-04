@@ -40,15 +40,13 @@ public class FlightDepartmentController {
         return "redirect:/flightdata";
     }
 
-    //перебинди путь как почистишь
     @RequestMapping("/eventremove/{id}")
     public String removeFlightDepartmentData(@PathVariable("id") int id) {
         this.flightDepartmentDataService.removeFlightDepartmentData(id);
 
         return "redirect:/flightdata";
     }
-
-    //перебинди путь как почистишь
+    
     @RequestMapping("eventedit/{id}")
     public String editFlightDepartmentData(@PathVariable("id") int id, Model model) {
         model.addAttribute("flightDepartmentData", this.flightDepartmentDataService.getFlightDepartmentDataById(id));
