@@ -57,9 +57,11 @@ public class FlightProcessingController {
     }
 
     // JSP не готово
-    @RequestMapping(value = "processinfo")
+    @RequestMapping(value = "processinfo/{id}")
     public String flightProcessingDataInfo(@PathVariable("id") int id, Model model) {
+        model.addAttribute("flightProcessingData", this.flightProcessingDataService.getFlightProcessingDataById(id));
 
+        return "processinfo";
     }
 
 }
