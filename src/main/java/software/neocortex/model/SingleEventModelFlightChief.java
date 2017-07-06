@@ -89,8 +89,8 @@ public class SingleEventModelFlightChief {
     @Column(name = "Risk_index")
     private int riskIndex;
 
-    @Column(name = "Talon_closure")
-    private String talonClosedBy;
+    @Column(name = "Cor_act_accepted")
+    private String correctiveActionAcceptanceBy;
 
     public int getId() {
         return id;
@@ -308,12 +308,12 @@ public class SingleEventModelFlightChief {
         this.riskIndex = riskIndex;
     }
 
-    public String getTalonClosedBy() {
-        return talonClosedBy;
+    public String getCorrectiveActionAcceptanceBy() {
+        return correctiveActionAcceptanceBy;
     }
 
-    public void setTalonClosedBy(String talonClosedBy) {
-        this.talonClosedBy = talonClosedBy;
+    public void setCorrectiveActionAcceptanceBy(String correctiveActionAcceptanceBy) {
+        this.correctiveActionAcceptanceBy = correctiveActionAcceptanceBy;
     }
 
     @Override
@@ -346,7 +346,7 @@ public class SingleEventModelFlightChief {
                 ", dateOfAnalysis='" + dateOfAnalysis + '\'' +
                 ", feedbackFromFlightDepartment='" + feedbackFromFlightDepartment + '\'' +
                 ", riskIndex=" + riskIndex +
-                ", talonClosedBy='" + talonClosedBy + '\'' +
+                ", correctiveActionAcceptanceBy='" + correctiveActionAcceptanceBy + '\'' +
                 '}';
     }
 }
