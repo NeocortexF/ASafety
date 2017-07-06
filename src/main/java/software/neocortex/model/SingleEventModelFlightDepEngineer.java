@@ -4,5 +4,5 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "flightdata")
-public class SingleEventModel {
+public class SingleEventModelFlightDepEngineer {
 }
