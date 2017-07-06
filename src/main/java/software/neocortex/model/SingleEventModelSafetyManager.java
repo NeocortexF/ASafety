@@ -82,4 +82,259 @@ public class SingleEventModelSafetyManager {
 
     @Column(name = "Analysis_date")
     private String dateOfAnalysis;
+
+    @Column(name = "Risk_index")
+    private int riskIndex;
+
+    @Column(name = "Talon_closure")
+    private String talonClosedBy;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getIncomingNumber() {
+        return incomingNumber;
+    }
+
+    public void setIncomingNumber(String incomingNumber) {
+        this.incomingNumber = incomingNumber;
+    }
+
+    public String getDateOfProcessing() {
+        return dateOfProcessing;
+    }
+
+    public void setDateOfProcessing(String dateOfProcessing) {
+        this.dateOfProcessing = dateOfProcessing;
+    }
+
+    public String getDateOfFlight() {
+        return dateOfFlight;
+    }
+
+    public void setDateOfFlight(String dateOfFlight) {
+        this.dateOfFlight = dateOfFlight;
+    }
+
+    public String getTailNumber() {
+        return tailNumber;
+    }
+
+    public void setTailNumber(String tailNumber) {
+        this.tailNumber = tailNumber;
+    }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public void setDeparture(String departure) {
+        this.departure = departure;
+    }
+
+    public String getArrival() {
+        return arrival;
+    }
+
+    public void setArrival(String arrival) {
+        this.arrival = arrival;
+    }
+
+    public String getEventOneClassification() {
+        return eventOneClassification;
+    }
+
+    public void setEventOneClassification(String eventOneClassification) {
+        this.eventOneClassification = eventOneClassification;
+    }
+
+    public String getEventTwoClassification() {
+        return eventTwoClassification;
+    }
+
+    public void setEventTwoClassification(String eventTwoClassification) {
+        this.eventTwoClassification = eventTwoClassification;
+    }
+
+    public String getEventThreeClassification() {
+        return eventThreeClassification;
+    }
+
+    public void setEventThreeClassification(String eventThreeClassification) {
+        this.eventThreeClassification = eventThreeClassification;
+    }
+
+    public String getEventFourClassification() {
+        return eventFourClassification;
+    }
+
+    public void setEventFourClassification(String eventFourClassification) {
+        this.eventFourClassification = eventFourClassification;
+    }
+
+    public String getEventOne() {
+        return eventOne;
+    }
+
+    public void setEventOne(String eventOne) {
+        this.eventOne = eventOne;
+    }
+
+    public String getEventTwo() {
+        return eventTwo;
+    }
+
+    public void setEventTwo(String eventTwo) {
+        this.eventTwo = eventTwo;
+    }
+
+    public String getEventThree() {
+        return eventThree;
+    }
+
+    public void setEventThree(String eventThree) {
+        this.eventThree = eventThree;
+    }
+
+    public String getEventFour() {
+        return eventFour;
+    }
+
+    public void setEventFour(String eventFour) {
+        this.eventFour = eventFour;
+    }
+
+    public String getEventOneForwardRiskEstimate() {
+        return eventOneForwardRiskEstimate;
+    }
+
+    public void setEventOneForwardRiskEstimate(String eventOneForwardRiskEstimate) {
+        this.eventOneForwardRiskEstimate = eventOneForwardRiskEstimate;
+    }
+
+    public String getEventTwoForwardRiskEstimate() {
+        return eventTwoForwardRiskEstimate;
+    }
+
+    public void setEventTwoForwardRiskEstimate(String eventTwoForwardRiskEstimate) {
+        this.eventTwoForwardRiskEstimate = eventTwoForwardRiskEstimate;
+    }
+
+    public String getEventThreeForwardRiskEstimate() {
+        return eventThreeForwardRiskEstimate;
+    }
+
+    public void setEventThreeForwardRiskEstimate(String eventThreeForwardRiskEstimate) {
+        this.eventThreeForwardRiskEstimate = eventThreeForwardRiskEstimate;
+    }
+
+    public String getEventFourForwardRiskEstimate() {
+        return eventFourForwardRiskEstimate;
+    }
+
+    public void setEventFourForwardRiskEstimate(String eventFourForwardRiskEstimate) {
+        this.eventFourForwardRiskEstimate = eventFourForwardRiskEstimate;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public String getAnalysis() {
+        return analysis;
+    }
+
+    public void setAnalysis(String analysis) {
+        this.analysis = analysis;
+    }
+
+    public String getCorrectiveAction() {
+        return correctiveAction;
+    }
+
+    public void setCorrectiveAction(String correctiveAction) {
+        this.correctiveAction = correctiveAction;
+    }
+
+    public String getSquadronChief() {
+        return squadronChief;
+    }
+
+    public void setSquadronChief(String squadronChief) {
+        this.squadronChief = squadronChief;
+    }
+
+    public String getDateOfAnalysis() {
+        return dateOfAnalysis;
+    }
+
+    public void setDateOfAnalysis(String dateOfAnalysis) {
+        this.dateOfAnalysis = dateOfAnalysis;
+    }
+
+    public int getRiskIndex() {
+        return riskIndex;
+    }
+
+    public void setRiskIndex(int riskIndex) {
+        this.riskIndex = riskIndex;
+    }
+
+    public String getTalonClosedBy() {
+        return talonClosedBy;
+    }
+
+    public void setTalonClosedBy(String talonClosedBy) {
+        this.talonClosedBy = talonClosedBy;
+    }
+
+    @Override
+    public String toString() {
+        return "SingleEventModelSafetyManager{" +
+                "id=" + id +
+                ", incomingNumber='" + incomingNumber + '\'' +
+                ", dateOfProcessing='" + dateOfProcessing + '\'' +
+                ", dateOfFlight='" + dateOfFlight + '\'' +
+                ", tailNumber='" + tailNumber + '\'' +
+                ", flightNumber='" + flightNumber + '\'' +
+                ", departure='" + departure + '\'' +
+                ", arrival='" + arrival + '\'' +
+                ", eventOneClassification='" + eventOneClassification + '\'' +
+                ", eventTwoClassification='" + eventTwoClassification + '\'' +
+                ", eventThreeClassification='" + eventThreeClassification + '\'' +
+                ", eventFourClassification='" + eventFourClassification + '\'' +
+                ", eventOne='" + eventOne + '\'' +
+                ", eventTwo='" + eventTwo + '\'' +
+                ", eventThree='" + eventThree + '\'' +
+                ", eventFour='" + eventFour + '\'' +
+                ", eventOneForwardRiskEstimate='" + eventOneForwardRiskEstimate + '\'' +
+                ", eventTwoForwardRiskEstimate='" + eventTwoForwardRiskEstimate + '\'' +
+                ", eventThreeForwardRiskEstimate='" + eventThreeForwardRiskEstimate + '\'' +
+                ", eventFourForwardRiskEstimate='" + eventFourForwardRiskEstimate + '\'' +
+                ", remarks='" + remarks + '\'' +
+                ", analysis='" + analysis + '\'' +
+                ", correctiveAction='" + correctiveAction + '\'' +
+                ", squadronChief='" + squadronChief + '\'' +
+                ", dateOfAnalysis='" + dateOfAnalysis + '\'' +
+                ", riskIndex=" + riskIndex +
+                ", talonClosedBy='" + talonClosedBy + '\'' +
+                '}';
+    }
 }
