@@ -1,6 +1,5 @@
 package software.neocortex.dao.implementation;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
