@@ -15,5 +15,4 @@ public interface FlightDepartmentDAO {
     FlightDepartmentData getFlightDepartmentDataById(int id);
 
     List<FlightDepartmentData> listFlightDepartmentData();
-
 }
