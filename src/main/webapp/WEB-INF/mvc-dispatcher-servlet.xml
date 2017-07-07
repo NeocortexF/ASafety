@@ -32,6 +32,11 @@
                 <value>software.neocortex.model.FlightDepartmentData</value>
                 <value>software.neocortex.model.FlightProcessingData</value>
                 <value>software.neocortex.model.AviasquadronData</value>
+                <value>software.neocortex.model.SingleSquadronModel</value>
+                <value>software.neocortex.model.SingleEventModelFlightChief</value>
+                <value>software.neocortex.model.SingleEventModelFlightDepEngineer</value>
+                <value>software.neocortex.model.SingleEventModelSafetyManager</value>
+                <value>software.neocortex.model.SingleProcessingModel</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -63,7 +68,7 @@
         <property name="aviasquadronDAO" ref="aviasquadronDao"/>
     </bean>
 
-    <!-- Dao and Service beans for Flight Processing Engineering  -->
+    <!-- Dao and Service beans for Flight Processing Engineering -->
     <bean id="flightProcessingDao" class="software.neocortex.dao.implementation.FlightProcessingDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
@@ -71,9 +76,57 @@
     <bean id = "flightProcessingDataService" class="software.neocortex.service.implementation.FlightProcessingDataServiceImpl">
         <property name="flightProcessingDAO" ref="flightProcessingDao"/>
     </bean>
-    <!-- ======================================================================== -->
 
-    <!-- options -->
+    <!-- ============================================ -->
+    <!-- Dao and Service beans for Single Events Data -->
+
+    <!-- Engineering -->
+    <bean id="singleProcessingDao" class="software.neocortex.dao.implementation.SingleProcessingDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "singleProcessingDataService" class="software.neocortex.service.implementation.SingleProcessingServiceImpl">
+        <property name="singleProcessingDAO" ref="singleProcessingDao"/>
+    </bean>
+
+    <!-- Air Squad -->
+    <bean id="singleSquadronDao" class="software.neocortex.dao.implementation.SingleSquadronDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "singleSquadronService" class="software.neocortex.service.implementation.SingleSquadronServiceImpl">
+        <property name="singleSquadronDAO" ref="singleSquadronDao"/>
+    </bean>
+
+    <!-- Safety Manager -->
+    <bean id="singleEventSafetyManagerDao" class="software.neocortex.dao.implementation.SingleEventSafetyManagerDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "singleEventSafetyManagerService" class="software.neocortex.service.implementation.SingleEventSafetyManagerServiceImpl">
+        <property name="singleEventSafetyManagerDAO" ref="singleEventSafetyManagerDao"/>
+    </bean>
+
+    <!-- Flight Department Engineer -->
+    <bean id="singleEventFlightDepEngineerDao" class="software.neocortex.dao.implementation.SingleEventFlightDepEngineerDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "singleEventFlightDepEngineerService" class="software.neocortex.service.implementation.SingleEventFlightDepEngineerServiceImpl">
+        <property name="singleEventFlightDepEngineerDAO" ref="singleEventFlightDepEngineerDao"/>
+    </bean>
+
+    <!-- Flight Chief -->
+    <bean id="singleEventFlightChiefDao" class="software.neocortex.dao.implementation.SingleEventFlightChiefDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "singleEventFlightChiefService" class="software.neocortex.service.implementation.SingleEventFlightChiefServiceImpl">
+        <property name="singleEventFlightChiefDAO" ref="singleEventFlightChiefDao"/>
+    </bean>
+
+    <!-- ========================================== -->
+    <!-- Options -->
     <context:component-scan base-package="software.neocortex"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
