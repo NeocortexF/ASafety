@@ -18,13 +18,13 @@ public class SingleSquadronServiceImpl implements SingleSquadronService {
     @Override
     @Transactional
     public void addSingleSquadronData(SingleSquadronModel singleSquadronModel) {
-        this.addSingleSquadronData(singleSquadronModel);
+        this.singleSquadronDAO.addSingleSquadronData(singleSquadronModel);
     }
 
     @Override
     @Transactional
     public void updateSingleSquadronData(SingleSquadronModel singleSquadronModel) {
-        this.updateSingleSquadronData(singleSquadronModel);
+        this.singleSquadronDAO.updateSingleSquadronData(singleSquadronModel);
     }
 
     @Override
