@@ -117,11 +117,6 @@
                 <scope>runtime</scope>
             </dependency>
 
-
-            <!-- !!!!!!!!!! -->
-            <!-- <artifactId>servlet-api</artifactId>
-            <version>2.5</version> -->
-
             <!-- Servlet -->
             <dependency>
                 <groupId>javax.servlet</groupId>
