@@ -1,7 +1,12 @@
 package software.neocortex.service;
 
-/**
- * Created by Администратор on 07.07.2017.
- */
+import software.neocortex.model.SingleEventModelFlightChief;
+
 public interface SingleEventFlightChiefService {
+
+    void addSingleEventFlightChiefData(SingleEventModelFlightChief singleEventModelFlightChief);
+
+    void updateSingleEventFlightChiefData(SingleEventModelFlightChief singleEventModelFlightChief);
+
+    SingleEventModelFlightChief getSingleEventFlightChiefDataById(int id);
 }

@@ -1,7 +1,18 @@
 package software.neocortex.service;
 
-/**
- * Created by Администратор on 07.07.2017.
- */
+import software.neocortex.model.SingleProcessingModel;
+
+import java.util.List;
+
 public interface SingleProcessingService {
+
+    void addSingleProcessingData(SingleProcessingModel singleProcessingModel);
+
+    void updateSingleProcessingData(SingleProcessingModel singleProcessingModel);
+
+    void removeSingleProcessingData(int id);
+
+    SingleProcessingModel getSingleProcessingDataById(int id);
+
+    List<SingleProcessingModel> listSingleProcessingData();
 }

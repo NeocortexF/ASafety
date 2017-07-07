@@ -1,7 +1,12 @@
 package software.neocortex.service;
 
-/**
- * Created by Администратор on 07.07.2017.
- */
+import software.neocortex.model.SingleEventModelSafetyManager;
+
 public interface SingleEventSafetyManagerService {
+
+    void addSingleEventSafetyManagerData(SingleEventModelSafetyManager singleEventModelSafetyManager);
+
+    void updateSingleEventSafetyManagerData(SingleEventModelSafetyManager singleEventModelSafetyManager);
+
+    SingleEventModelSafetyManager getSingleEventSafetyManagerDataById(int id);
 }

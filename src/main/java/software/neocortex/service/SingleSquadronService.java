@@ -1,7 +1,12 @@
 package software.neocortex.service;
 
-/**
- * Created by Администратор on 07.07.2017.
- */
+import software.neocortex.model.SingleSquadronModel;
+
 public interface SingleSquadronService {
+
+    void addSingleSquadronData(SingleSquadronModel singleSquadronModel);
+
+    void updateSingleSquadronData(SingleSquadronModel singleSquadronModel);
+
+    SingleSquadronModel getSingleSquadronDataById(int id);
 }
