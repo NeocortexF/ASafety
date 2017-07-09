@@ -11,7 +11,7 @@ public interface DirectoryFleetDAO {
 
     void updateAircraft(DirectoryFleetModel directoryFleetModel);
 
-    void removeAircrat(int id);
+    void removeAircraft(int id);
 
     DirectoryFleetModel getAircraftById(int id);
 
