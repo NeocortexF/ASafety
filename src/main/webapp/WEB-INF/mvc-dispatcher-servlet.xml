@@ -37,6 +37,10 @@
                 <value>software.neocortex.model.SingleEventModelFlightDepEngineer</value>
                 <value>software.neocortex.model.SingleEventModelSafetyManager</value>
                 <value>software.neocortex.model.SingleProcessingModel</value>
+                <value>software.neocortex.model.DirectoryFleetModel</value>
+                <value>software.neocortex.model.DirectoryFlightPersonnelModel</value>
+                <value>software.neocortex.model.DirectoryEngineeringPersonnelModel</value>
+                <value>software.neocortex.model.DirectoryAirportsModel</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -123,6 +127,43 @@
 
     <bean id = "singleEventFlightChiefService" class="software.neocortex.service.implementation.SingleEventFlightChiefServiceImpl">
         <property name="singleEventFlightChiefDAO" ref="singleEventFlightChiefDao"/>
+    </bean>
+
+    <!-- Dao and Service beans for Directories -->
+    <!-- Airports -->
+    <bean id="directoryAirportsDao" class="software.neocortex.dao.implementation.DirectoryAirportsDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "directoryAirportsService" class="software.neocortex.service.implementation.DirectoryAirportsServiceImpl">
+        <property name="directoryAirportsDAO" ref="directoryAirportsDao"/>
+    </bean>
+
+    <!-- Fleet -->
+    <bean id="directoryFleetDao" class="software.neocortex.dao.implementation.DirectoryFleetDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "directoryFleetService" class="software.neocortex.service.implementation.DirectoryFleetServiceImpl">
+        <property name="directoryFleetDAO" ref="directoryFleetDao"/>
+    </bean>
+
+    <!-- Engineering Personnel -->
+    <bean id="directoryEngineeringPersonnelDao" class="software.neocortex.dao.implementation.DirectoryEngineeringPersonnelDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "directoryEngineeringPersonnelService" class="software.neocortex.service.implementation.DirectoryEngineeringPersonnelServiceImpl">
+        <property name="directoryEngineeringPersonnelDAO" ref="directoryEngineeringPersonnelDao"/>
+    </bean>
+
+    <!-- Flight Personnel -->
+    <bean id="directoryFlightPersonnelDao" class="software.neocortex.dao.implementation.DirectoryFlightPersonnelDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "directoryFlightPersonnelService" class="software.neocortex.service.implementation.DirectoryFlightPersonnelServiceImpl">
+        <property name="directoryFlightPersonnelDAO" ref="directoryFlightPersonnelDao"/>
     </bean>
 
     <!-- ========================================== -->
