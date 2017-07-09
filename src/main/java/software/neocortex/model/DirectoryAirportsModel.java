@@ -1,5 +1,5 @@
 package software.neocortex.model;
 
 
-public class DirectoryAirports {
+public class DirectoryAirportsModel {
 }
