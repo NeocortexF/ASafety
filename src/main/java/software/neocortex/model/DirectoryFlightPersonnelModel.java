@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class DirectoryFlightPersonnel {
+public class DirectoryFlightPersonnelModel {
 
     @Id
     @Column(name = "person_id")
@@ -66,7 +66,7 @@ public class DirectoryFlightPersonnel {
 
     @Override
     public String toString() {
-        return "DirectoryFlightPersonnel{" +
+        return "DirectoryFlightPersonnelModel{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", staffNumber='" + staffNumber + '\'' +
