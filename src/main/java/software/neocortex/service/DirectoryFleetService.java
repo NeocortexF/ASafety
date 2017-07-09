@@ -9,9 +9,9 @@ public interface DirectoryFleetService {
 
     void addAircraft(DirectoryFleetModel directoryFleetModel);
 
-    void updateAicraft(DirectoryFleetModel directoryFleetModel);
+    void updateAircraft(DirectoryFleetModel directoryFleetModel);
 
-    void removeAicraft(int id);
+    void removeAircraft(int id);
 
     DirectoryFleetModel getAircraftById(int id);
 
