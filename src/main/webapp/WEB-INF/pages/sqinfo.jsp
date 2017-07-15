@@ -66,7 +66,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- Advanced Tables -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Талон обратной связи № ${aviasquadronSingleData.incomingNumber}
@@ -212,6 +211,31 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>Примечания</th>
+                                        <th>Обратная связь из летного отряда</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="gradeA">
+                                        <td>${aviasquadronSingleData.remarks}</td>
+                                        <td>${aviasquadronSingleData.feedbackFromFlightDepartment}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
         </div>
     </div>
     <!-- /. PAGE INNER  -->
