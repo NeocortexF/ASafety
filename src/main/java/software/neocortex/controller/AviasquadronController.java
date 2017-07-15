@@ -60,7 +60,7 @@ public class AviasquadronController {
     }
 
     // JSP не готово
-    @RequestMapping(value = "/sqinfo/")
+    @RequestMapping(value = "/sqinfo/{id}")
     public String aviasquadronDataInfo(@PathVariable("id") int id, Model model) {
         model.addAttribute("aviasquadronSingleData", this.singleSquadronService.getSingleSquadronDataById(id));
 
