@@ -23,6 +23,12 @@ public class AviasquadronController {
         this.aviasquadronDataService = aviasquadronDataService;
     }
 
+    @Autowired
+    @Qualifier(value = "singleSquadronService")
+    public void setSingleSquadronService(SingleSquadronService singleSquadronService) {
+        this.singleSquadronService = singleSquadronService;
+    }
+
     @RequestMapping(value = "squadrondata", method = RequestMethod.GET)
     public String listAviasquadronData(Model model) {
         model.addAttribute("aviasquadronData", new AviasquadronData());
