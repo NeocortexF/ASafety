@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flying Base 2</title>
+    <title>Flying Base 2: Flight Events Data</title>
     <!-- BOOTSTRAP STYLES-->
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/assets/css/bootstrap.css'/>" />
     <!-- FONTAWESOME STYLES-->
