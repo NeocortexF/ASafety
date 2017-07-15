@@ -75,16 +75,16 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
             <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             Перечень событий
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <c:if test="${!empty aviasquadronSingleData}">
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                         <tr>
+                                            <th>ID</th>
                                             <th>Вх. №</th>
                                             <th>Дата полета</th>
                                             <th>Рейс</th>
@@ -102,6 +102,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         </thead>
                                         <tbody>
                                             <tr class="gradeA">  <!-- HARDCODE !!! --->
+                                                <td>${aviasquadronSingleData.id}</td>
                                                 <td>${aviasquadronSingleData.incomingNumber}</td>
                                                 <td>${aviasquadronSingleData.dateOfFlight}</td>
                                                 <td>${aviasquadronSingleData.flightNumber}</td>
@@ -118,7 +119,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                             </tr>
                                         </tbody>
                                     </table>
-                                </c:if>
                             </div>
                         </div>
                     </div>
