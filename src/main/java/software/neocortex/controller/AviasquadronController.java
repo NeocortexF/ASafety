@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import software.neocortex.model.AviasquadronData;
 import software.neocortex.service.AviasquadronDataService;
+import software.neocortex.service.SingleSquadronService;
 
 @Controller
 public class AviasquadronController {
     private AviasquadronDataService aviasquadronDataService;
+    private SingleSquadronService singleSquadronService;
 
     @Autowired
     @Qualifier(value = "aviasquadronDataService")
@@ -60,7 +62,7 @@ public class AviasquadronController {
     // JSP не готово
     @RequestMapping(value = "/sqinfo/")
     public String aviasquadronDataInfo(@PathVariable("id") int id, Model model) {
-        model.addAttribute("\"aviasquadronData\", this.aviasquadronDataService.getAviasquadronDataById(id)");
+        model.addAttribute("aviasquadronSingleData", this.singleSquadronService.getSingleSquadronDataById(id));
 
         return "sqinfo";
     }
