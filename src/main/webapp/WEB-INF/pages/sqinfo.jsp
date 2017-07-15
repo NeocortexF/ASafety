@@ -120,7 +120,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Код события 1</th>
+                                        <th>Событие 1</th>
                                         <th>Классификация события</th>
                                         <th>Предварительная оценка риска</th>
                                     </tr>
@@ -144,7 +144,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Код события 2</th>
+                                        <th>Событие 2</th>
                                         <th>Классификация события</th>
                                         <th>Предварительная оценка риска</th>
                                     </tr>
@@ -170,7 +170,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Код события 3</th>
+                                        <th>Событие 3</th>
                                         <th>Классификация события</th>
                                         <th>Предварительная оценка риска</th>
                                     </tr>
@@ -194,7 +194,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Код события 4</th>
+                                        <th>Событие 4</th>
                                         <th>Классификация события</th>
                                         <th>Предварительная оценка риска</th>
                                     </tr>
