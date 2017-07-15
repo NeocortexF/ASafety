@@ -66,26 +66,16 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Летные события</h2>
-                    <h5>Уровень доступа: летный отряд</h5>
-                </div>
-            </div>
-            <!-- /. ROW  -->
-            <hr/>
-            <div class="row">
-                <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Перечень событий
+                            Талон обратной связи № ${aviasquadronSingleData.incomingNumber}
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <table class="table table-bordered">
                                         <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Вх. №</th>
                                             <th>Дата полета</th>
                                             <th>Рейс</th>
                                             <th>Вылет</th>
@@ -102,8 +92,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         </thead>
                                         <tbody>
                                             <tr class="gradeA">  <!-- HARDCODE !!! --->
-                                                <td>${aviasquadronSingleData.id}</td>
-                                                <td>${aviasquadronSingleData.incomingNumber}</td>
                                                 <td>${aviasquadronSingleData.dateOfFlight}</td>
                                                 <td>${aviasquadronSingleData.flightNumber}</td>
                                                 <td>${aviasquadronSingleData.departure}</td>
@@ -122,11 +110,109 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                             </div>
                         </div>
                     </div>
-                    <!--End Advanced Tables -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Код события 1</th>
+                                        <th>Классификация события</th>
+                                        <th>Предварительная оценка риска</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="gradeA">  <!-- HARDCODE !!! --->
+                                        <td>${aviasquadronSingleData.eventOne}</td>
+                                        <td>${aviasquadronSingleData.eventOneClassification}</td>
+                                        <td>${aviasquadronSingleData.eventOneForwardRiskEstimate}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Код события 2</th>
+                                        <th>Классификация события</th>
+                                        <th>Предварительная оценка риска</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="gradeA">  <!-- HARDCODE !!! --->
+                                        <td>${aviasquadronSingleData.eventTwo}</td>
+                                        <td>${aviasquadronSingleData.eventTwoClassification}</td>
+                                        <td>${aviasquadronSingleData.eventTwoForwardRiskEstimate}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Код события 3</th>
+                                        <th>Классификация события</th>
+                                        <th>Предварительная оценка риска</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="gradeA">  <!-- HARDCODE !!! --->
+                                        <td>${aviasquadronSingleData.eventThree}</td>
+                                        <td>${aviasquadronSingleData.eventThreeClassification}</td>
+                                        <td>${aviasquadronSingleData.eventThreeForwardRiskEstimate}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Код события 4</th>
+                                        <th>Классификация события</th>
+                                        <th>Предварительная оценка риска</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="gradeA">  <!-- HARDCODE !!! --->
+                                        <td>${aviasquadronSingleData.eventFour}</td>
+                                        <td>${aviasquadronSingleData.eventFourClassification}</td>
+                                        <td>${aviasquadronSingleData.eventFourForwardRiskEstimate}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- /. ROW  -->
     </div>
     <!-- /. PAGE INNER  -->
 </div>
@@ -143,11 +229,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 <!-- DATA TABLE SCRIPTS -->
 <script type="text/javascript" src="<spring:url value='/resources/assets/js/dataTables/jquery.dataTables.js'/>"></script>
 <script type="text/javascript" src="<spring:url value='/resources/assets/js/dataTables/dataTables.bootstrap.js'/>"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#dataTables-example').dataTable();
-    });
-</script>
 <!-- CUSTOM SCRIPTS -->
 <script type="text/javascript" src="<spring:url value='/resources/assets/js/custom.js'/>"></script>
 
