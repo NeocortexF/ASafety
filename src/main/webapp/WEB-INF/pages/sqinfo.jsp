@@ -81,49 +81,41 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <c:if test="${!empty listFlightDepartmentData}">
+                                <c:if test="${!empty aviasquadronSingleData}">
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Вх. №</th>
                                             <th>Дата полета</th>
-                                            <th>№ рейса</th>
-                                            <th>Взлет</th>
-                                            <th>Посадка</th>
-                                            <th>Бортовой номер</th>
-                                            <th>Event</th>
-                                            <th>КВС</th>
-                                            <th>ВП</th>
+                                            <th>Рейс</th>
+                                            <th>Вылет</th>
+                                            <th>Прибытие</th>
+                                            <th>Борт. номер</th>
+                                            <th>КВС ID</th>
+                                            <th>ВП ID</th>
                                             <th>PF</th>
-                                            <th>АЕ</th>
+                                            <th>Необходимые мероприятия</th>
+                                            <th>Срок КД</th>
                                             <th>КД одобрены</th>
-                                            <th>Индекс риска</th>
                                             <th>Закрыт</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <c:forEach items="${listFlightDepartmentData}" var="data">
                                             <tr class="gradeA">  <!-- HARDCODE !!! --->
-                                                <td>${data.id}</td>
-                                                <td><a href="/fdinfo/${data.id}" target="_blank">${data.incomingNumber}</a></td>
-                                                <td>${data.dateOfFlight}</td>
-                                                <td>${data.flightNumber}</td>
-                                                <td>${data.departure}</td>
-                                                <td>${data.arrival}</td>
-                                                <td>${data.tailNumber}</td>
-                                                <td>${data.mainEventNumber}</td>
-                                                <td>${data.pilotInCommand}</td>
-                                                <td>${data.firstAssistant}</td>
-                                                <td>${data.pilotFlying}</td>
-                                                <td>${data.aviaEsquadron}</td>
-                                                <td>${data.correctiveActionAcceptanceBy}</td>
-                                                <td>${data.riskIndex}</td>
-                                                <td>${data.talonClosedBy}</td>
-                                                <!--    <td><a href="<c:url value='/eventedit/${data.id}'/>">Edit</a></td> -->
-                                                <!--    <td><f href="<c:url value='/eventremove/${data.id}'/>">Delete</f></td> -->
+                                                <td>${aviasquadronSingleData.incomingNumber}</td>
+                                                <td>${aviasquadronSingleData.dateOfFlight}</td>
+                                                <td>${aviasquadronSingleData.flightNumber}</td>
+                                                <td>${aviasquadronSingleData.departure}</td>
+                                                <td>${aviasquadronSingleData.arrival}</td>
+                                                <td>${aviasquadronSingleData.tailNumber}</td>
+                                                <td>${aviasquadronSingleData.pilotInCommand}</td>
+                                                <td>${aviasquadronSingleData.firstAssistant}</td>
+                                                <td>${aviasquadronSingleData.pilotFlying}</td>
+                                                <td>${aviasquadronSingleData.necessaryActions}</td>
+                                                <td>${aviasquadronSingleData.deadlineOfCorrectiveAction}</td>
+                                                <td>${aviasquadronSingleData.correctiveActionAcceptanceBy}</td>
+                                                <td>${aviasquadronSingleData.talonClosedBy}</td>
                                             </tr>
-                                        </c:forEach>
                                         </tbody>
                                     </table>
                                 </c:if>
