@@ -272,6 +272,33 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 </div>
             </div>
             <hr/>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="analysisOfEvents">Анализ</label>
+                                    <textarea class="form-control" rows="3" id="analysisOfEvents" placeholder="Анализ событий полета"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="correctiveActions">Корректирующие действия</label>
+                                    <textarea class="form-control" rows="3" id="correctiveActions" placeholder="Что было сделано в авиаэскадрильи по данному событию?"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="responsiblePerson">Ответственное лицо</label>
+                                    <input type="text" class="form-control" id="responsiblePerson" placeholder="Командир эскадрильи или заместитель">
+                                </div>
+                                <div class="form-group">
+                                    <label for="openEventsFile">Открыть материалы</label>
+                                    <input type="file" id="openEventsFile">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /. PAGE INNER  -->
