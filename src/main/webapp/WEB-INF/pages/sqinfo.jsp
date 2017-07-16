@@ -65,7 +65,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
     <div id="page-wrapper" >
         <div id="page-inner">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-12 col-md-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Талон обратной связи № ${aviasquadronSingleData.incomingNumber}
@@ -112,7 +112,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -136,7 +136,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -162,7 +162,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -186,7 +186,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="table-responsive">
