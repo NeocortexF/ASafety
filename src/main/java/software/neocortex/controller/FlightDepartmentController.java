@@ -10,15 +10,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import software.neocortex.model.FlightDepartmentData;
 import software.neocortex.service.FlightDepartmentDataService;
+import software.neocortex.service.SingleEventFlightDepEngineerService;
 
 @Controller
 public class FlightDepartmentController {
+
     private FlightDepartmentDataService flightDepartmentDataService;
+    private SingleEventFlightDepEngineerService singleEventFlightDepEngineerService;
+
 
     @Autowired
     @Qualifier(value = "flightDepartmentDataService")
     public void setFlightDepartmentDataService(FlightDepartmentDataService flightDepartmentDataService) {
         this.flightDepartmentDataService = flightDepartmentDataService;
+    }
+
+    @Autowired
+    @Qualifier(value = "singleEventFlightDepEngineerService")
+    public void setSingleEventFlightDepEngineerService(SingleEventFlightDepEngineerService singleEventFlightDepEngineerService) {
+        this.singleEventFlightDepEngineerService = singleEventFlightDepEngineerService;
     }
 
     @RequestMapping(value = "flightdata", method = RequestMethod.GET)

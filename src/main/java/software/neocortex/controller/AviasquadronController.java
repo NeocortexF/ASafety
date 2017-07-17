@@ -14,6 +14,7 @@ import software.neocortex.service.SingleSquadronService;
 
 @Controller
 public class AviasquadronController {
+
     private AviasquadronDataService aviasquadronDataService;
     private SingleSquadronService singleSquadronService;
 
@@ -65,7 +66,6 @@ public class AviasquadronController {
         return "squadrondata";
     }
 
-    // JSP не готово
     @RequestMapping(value = "/sqinfo/{id}")
     public String aviasquadronDataInfo(@PathVariable("id") int id, Model model) {
         model.addAttribute("aviasquadronSingleData", this.singleSquadronService.getSingleSquadronDataById(id));
