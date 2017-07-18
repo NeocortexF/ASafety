@@ -37,17 +37,6 @@ public class AviasquadronDaoImpl implements AviasquadronDAO {
     }
 
     @Override
-    public void removeAviasquadronData(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        AviasquadronData aviasquadronData = (AviasquadronData) session.load(AviasquadronData.class, new Integer(id));
-
-        if(aviasquadronData != null) {
-            session.delete(aviasquadronData);
-        }
-        logger.info("Aviasquadron data successfully removed. Data details: " + aviasquadronData);
-    }
-
-    @Override
     public AviasquadronData getAviasquadronDataById(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         AviasquadronData aviasquadronData = (AviasquadronData) session.load(AviasquadronData.class, new Integer(id));

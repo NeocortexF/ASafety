@@ -32,12 +32,6 @@ public class AviasquandronDataServiceImpl implements AviasquadronDataService {
 
     @Override
     @Transactional
-    public void removeAviasquadronData(int id) {
-        this.aviasquadronDAO.removeAviasquadronData(id);
-    }
-
-    @Override
-    @Transactional
     public AviasquadronData getAviasquadronDataById(int id) {
         return this.aviasquadronDAO.getAviasquadronDataById(id);
     }

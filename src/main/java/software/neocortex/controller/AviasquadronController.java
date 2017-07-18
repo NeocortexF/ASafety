@@ -49,15 +49,7 @@ public class AviasquadronController {
         return "redirect:/squadrondata";
     }
 
-    //поидее эскадрилья не должна иметь возможность удалять событие - метод остается только в учебных целях
-    @RequestMapping(value = "/squadronremovedata/{id}")
-    public String removeAviasquadronData(@PathVariable("id") int id) {
-        this.aviasquadronDataService.removeAviasquadronData(id);
-
-        return "redirect:/squadrondata";
-    }
-
-
+    //TODO тоже нахер выпилить - не нужно редакировать во всем листе
     @RequestMapping(value = "/squadronedit/{id}")
     public String editAviasquadronData(@PathVariable("id") int id, Model model) {
         model.addAttribute("aviasquadronData", this.aviasquadronDataService.getAviasquadronDataById(id));

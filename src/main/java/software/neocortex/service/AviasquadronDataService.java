@@ -10,8 +10,6 @@ public interface AviasquadronDataService {
 
     void updateAviasquadronData(AviasquadronData aviasquadronData);
 
-    void removeAviasquadronData(int id);
-
     AviasquadronData getAviasquadronDataById(int id);
 
     List<AviasquadronData> listAviasquadronData();
