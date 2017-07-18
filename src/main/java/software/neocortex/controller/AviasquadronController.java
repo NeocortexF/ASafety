@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import software.neocortex.model.AviasquadronData;
+import software.neocortex.model.SingleSquadronModel;
 import software.neocortex.service.AviasquadronDataService;
 import software.neocortex.service.SingleSquadronService;
 
@@ -49,19 +50,30 @@ public class AviasquadronController {
         return "redirect:/squadrondata";
     }
 
-    //TODO тоже нахер выпилить - не нужно редакировать во всем листе
-    @RequestMapping(value = "/squadronedit/{id}")
-    public String editAviasquadronData(@PathVariable("id") int id, Model model) {
-        model.addAttribute("aviasquadronData", this.aviasquadronDataService.getAviasquadronDataById(id));
-        model.addAttribute("listAviasquadronData", this.aviasquadronDataService.listAviasquadronData());
-
-        return "squadrondata";
-    }
+//    //TODO тоже нахер выпилить - не нужно редакировать во всем листе
+//    @RequestMapping(value = "/squadronedit/{id}")
+//    public String editAviasquadronData(@PathVariable("id") int id, Model model) {
+//        model.addAttribute("aviasquadronData", this.aviasquadronDataService.getAviasquadronDataById(id));
+//        model.addAttribute("listAviasquadronData", this.aviasquadronDataService.listAviasquadronData());
+//
+//        return "squadrondata";
+//    }
 
     @RequestMapping(value = "/sqinfo/{id}")
     public String aviasquadronDataInfo(@PathVariable("id") int id, Model model) {
         model.addAttribute("aviasquadronSingleData", this.singleSquadronService.getSingleSquadronDataById(id));
 
         return "sqinfo";
+    }
+
+    @RequestMapping(value = "/sqinfo/update", method = RequestMethod.POST)
+    public String updateSingleAviasquadronData(@ModelAttribute("singleAviasquadronData") SingleSquadronModel singleSquadronModel) {
+        if(singleSquadronModel.getId() == 0) {
+            this.singleSquadronService.addSingleSquadronData(singleSquadronModel);
+        } else {
+            this.singleSquadronService.updateSingleSquadronData(singleSquadronModel);
+        }
+
+        return "redirect:/sqinfo";
     }
 }
