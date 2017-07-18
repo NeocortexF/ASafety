@@ -276,7 +276,8 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <form>
+                            <c:url var="updateAction" value="/sqinfo/update"/>
+                            <form:form action="${updateAction}" commandName="singleSquadronModel">
                                 <div class="form-group">
                                     <label for="analysisOfEvents">Анализ</label>
                                     <textarea class="form-control" rows="3" id="analysisOfEvents" placeholder="Анализ событий полета"></textarea>
@@ -287,14 +288,14 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                 </div>
                                 <div class="form-group">
                                     <label for="responsiblePerson">Ответственное лицо</label>
-                                    <input type="text" class="form-control" id="responsiblePerson" placeholder="Командир эскадрильи или заместитель">
+                                    <input path="squadronChief" type="text" class="form-control" id="responsiblePerson" placeholder="Командир эскадрильи или заместитель">
                                 </div>
                                 <div class="form-group">
                                     <label for="openEventsFile">Открыть материалы</label>
                                     <input type="file" id="openEventsFile">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Отправить</button>
-                            </form>
+                            </form:form>
                         </div>
                     </div>
                 </div>
