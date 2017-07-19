@@ -155,8 +155,8 @@
         <!-- Thymeleaf -->
         <dependency>
             <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf</artifactId>
-            <version>3.0.6.RELEASE</version>
+            <artifactId>thymeleaf-spring4</artifactId>
+            <version>3.0.2.RELEASE</version>
         </dependency>
         <!--<dependency>
             <groupId>org.thymeleaf.extras</groupId>
