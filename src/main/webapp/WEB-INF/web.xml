@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-	<display-name>Aviation Safety Solution</display-name>
+	<display-name>Flying Base 2</display-name>
 
 	<!-- MVC dispatcher -->
     <servlet>
@@ -33,10 +33,11 @@
 	</filter-mapping>
 
     <!-- JSP configuration for UTF-8 -->
-    <jsp-config>
+    <!-- <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
             <page-encoding>UTF-8</page-encoding>
         </jsp-property-group>
-    </jsp-config>
+    </jsp-config> -->
+
 </web-app>
