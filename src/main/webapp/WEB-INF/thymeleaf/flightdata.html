@@ -112,7 +112,16 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                             <td th:text="${data.pilotFlying}">${data.pilotFlying</td>
                                             <td th:text="${data.aviaEsquadron}">${data.aviaEsquadron</td>
                                             <td th:text="${data.correctiveActionAcceptanceBy}">correctiveActionAcceptanceBy</td>
-                                            <td th:text="${data.riskIndex}">riskIndex</td>
+                                          <!--  <td>
+
+                                                <span th:if="${data.riskIndex == 20}">
+                                                    <td class="success" th:text="${data.riskIndex}"></td>
+                                                </span>
+
+                                            </td> -->
+                                            <td th:if="${data.riskIndex == 20}" class="warning" th:text="${data.riskIndex}"></td>
+                                            <td th:if="${data.riskIndex == 1}" class="success" th:text="${data.riskIndex}"></td>
+
                                             <td th:text="${data.talonClosedBy}">talonClosedBy</td>
                                         </tr>
                                     </tbody>
