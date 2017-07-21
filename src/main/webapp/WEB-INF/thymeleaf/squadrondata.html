@@ -76,7 +76,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                             Перечень событий
                         </div>
                         <div class="panel-body">
-                            <div class="table-responsive">
+                            <div class="table-responsive" th:if="${not #lists.isEmpty(listAviasquadronData)}">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                     <tr>
@@ -99,7 +99,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     <tbody>
                                     <tr class="gradeA" th:each="data : ${listAviasquadronData}">
                                         <td th:text="*{data.id}">id</td>
-                                        <td th:text="${data.incomingNumber}"><a href="/sqinfo/" target="_blank" th:href="@{'/sqinfo/' + ${data.id}}">incomingNumber</a></td>
+                                        <td><a href="/sqinfo/" th:href="@{'/sqinfo/' + ${data.id}}" th:text="${data.incomingNumber}">incomingNumber</a></td>
                                         <td th:text="${data.dateOfFlight}">dateOfFlight</td>
                                         <td th:text="${data.flightNumber}">flightNumber</td>
                                         <td th:text="${data.departure}">departure</td>
