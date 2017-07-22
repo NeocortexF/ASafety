@@ -185,10 +185,16 @@ rows[z].cells[6].style.backgroundColor = "#c1c1c1"; // Saturday -->
     var table = document.getElementById("dataTable");
     var rows = table.getElementsByTagName("tr");
     for (var z = 0; z < rows.length; z++) {
-        if (rows[z].cells[13].innerHTML == "1") {
-            rows[z].cells[13].style.backgroundColor = "#87ff59";
+        if (rows[z].cells[13].innerHTML > 0 && rows[z].cells[13].innerHTML < 20) {
+            rows[z].cells[13].style.backgroundColor = "#c8fdc3";
+        } else if (rows[z].cells[13].innerHTML >= 20 && rows[z].cells[13].innerHTML < 100) {
+            rows[z].cells[13].style.backgroundColor = "#f3fda7";
+        } else if (rows[z].cells[13].innerHTML >= 100 && rows[z].cells[13].innerHTML < 200) {
+            rows[z].cells[13].style.backgroundColor = "#fdb08d";
+        } else if (rows[z].cells[13].innerHTML > 200) {
+            rows[z].cells[13].style.backgroundColor = "#ffabb1";
         }
 }
-</script> -
+</script>
 </body>
 </html>
