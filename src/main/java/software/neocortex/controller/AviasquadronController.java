@@ -15,7 +15,6 @@ import software.neocortex.service.SingleSquadronService;
 
 @Controller
 public class AviasquadronController {
-
     private AviasquadronDataService aviasquadronDataService;
     private SingleSquadronService singleSquadronService;
 
@@ -39,6 +38,7 @@ public class AviasquadronController {
         return "squadrondata";
     }
 
+    // TODO не должно быть на весь лист
     @RequestMapping(value = "/squadrondata/add", method = RequestMethod.POST)
     public String addAviasquadronData(@ModelAttribute("aviasquadronData") AviasquadronData aviasquadronData) {
         if(aviasquadronData.getId() == 0) {
@@ -49,15 +49,6 @@ public class AviasquadronController {
 
         return "redirect:/squadrondata";
     }
-
-//    //TODO тоже нахер выпилить - не нужно редакировать во всем листе
-//    @RequestMapping(value = "/squadronedit/{id}")
-//    public String editAviasquadronData(@PathVariable("id") int id, Model model) {
-//        model.addAttribute("aviasquadronData", this.aviasquadronDataService.getAviasquadronDataById(id));
-//        model.addAttribute("listAviasquadronData", this.aviasquadronDataService.listAviasquadronData());
-//
-//        return "squadrondata";
-//    }
 
     @RequestMapping(value = "/sqinfo/{id}")
     public String aviasquadronDataInfo(@PathVariable("id") int id, Model model) {
