@@ -136,19 +136,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 <script src="resources/assets/js/jquery-1.10.2.js"></script>
 <!-- BOOTSTRAP SCRIPTS -->
 <script src="resources/assets/js/bootstrap.min.js"></script>
-<!-- METISMENU SCRIPTS -->
-<script src="resources/assets/js/jquery.metisMenu.js"></script>
-<!-- DATA TABLE SCRIPTS -->
-<script src="resources/assets/js/dataTables/jquery.dataTables.js"></script>
-<script src="resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#dataTable').dataTable();
-    });
-</script>
-<!-- CUSTOM SCRIPTS -->
-<script src="resources/assets/js/custom.js"></script>
-
 <!-- Table column color in accordance with risk weight -->
 <script>
     var table = document.getElementById("dataTable");
@@ -163,7 +150,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         } else if (rows[z].cells[13].innerHTML > 200) {
             rows[z].cells[13].style.backgroundColor = "#ff9f92";
         }
-}
+    }
 </script>
 <script>
     var col13 = document.querySelectorAll("#dataTable td:nth-child(13)");
@@ -177,5 +164,19 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         }
     });
 </script>
+<!-- METISMENU SCRIPTS -->
+<script src="resources/assets/js/jquery.metisMenu.js"></script>
+<!-- DATA TABLE SCRIPTS -->
+<script src="resources/assets/js/dataTables/jquery.dataTables.js"></script>
+<script src="resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#dataTable').dataTable();
+    });
+</script>
+<!-- CUSTOM SCRIPTS -->
+<script src="resources/assets/js/custom.js"></script>
+
+
 </body>
 </html>
