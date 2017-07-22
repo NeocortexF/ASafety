@@ -166,15 +166,16 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 }
 </script>
 <script>
-    var table = document.getElementById("dataTable");
-    var rows = table.getElementsByTagName("tr");
-    for (var z = 1; z < rows.length; z++) {
-        if (rows[z].cells[12].innerHTML.length > 3) {
-            rows[z].cells[12].innerHTML.replace('Глазков С.Н.', '/resources/assets/img/OK.png');
+    var col13 = document.querySelectorAll("#dataTable td:nth-child(13)");
+    [].forEach.call(col13, function(elem) {
+        if (elem.textContent.replace(/\s/g, "").length > 0) {
+            elem.innerHTML =
+                '<img src="/resources/assets/img/OK.png">';
         } else {
-            rows[z].cells[12].innerHTML.image('/resources/assets/img/Error.png')
+            elem.innerHTML =
+                '<img src="/resources/assets/img/Error.png">';
         }
-}
+    });
 </script>
 </body>
 </html>
