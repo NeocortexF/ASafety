@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Flying Base 2: Air Squadron</title>
-    <link href="resources/assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="resources/assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="resources/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
-    <link href="resources/assets/css/custom.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="resources/assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="resources/assets/css/font-awesome.css" rel="stylesheet"/>
+    <link href="resources/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet"/>
+    <link href="resources/assets/css/custom.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
 <body>
 <div id="wrapper">
@@ -27,7 +27,8 @@
         <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Выйти</a> </div>
+font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Выйти</a>
+        </div>
     </nav>
     <!-- /. NAV TOP  -->
     <nav class="navbar-default navbar-side" role="navigation">
@@ -37,7 +38,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                     <img src="/resources/assets/img/newfb28.png" class="user-image img-responsive"/>
                 </li>
                 <li>
-                    <a class="active-menu"  href="index.html"><i class="fa fa-table fa-3x"></i>  События</a>
+                    <a class="active-menu" href="index.html"><i class="fa fa-table fa-3x"></i> События</a>
                 </li>
                 <li>
                     <a href="ui.html"><i class="fa fa-edit fa-3x"></i> Сообщения</a>
@@ -53,7 +54,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         </div>
     </nav>
     <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" >
+    <div id="page-wrapper">
         <div id="page-inner">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -88,12 +89,24 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         <td th:text="${aviasquadronSingleData.arrival}">arrival}</td>
                                         <td th:text="${aviasquadronSingleData.tailNumber}">tailNumber}</td>
                                         <td th:text="${aviasquadronSingleData.pilotInCommand}">pilotInCommand}</td>
-                                        <td th:text="${aviasquadronSingleData.firstAssistant}">${aviasquadronSingleData.firstAssistant}</td>
-                                        <td th:text="${aviasquadronSingleData.pilotFlying}">${aviasquadronSingleData.pilotFlying}</td>
-                                        <td th:text="${aviasquadronSingleData.necessaryActions}">${aviasquadronSingleData.necessaryActions}</td>
-                                        <td th:text="${aviasquadronSingleData.deadlineOfCorrectiveAction}">${aviasquadronSingleData.deadlineOfCorrectiveAction}</td>
-                                        <td th:text="${aviasquadronSingleData.correctiveActionAcceptanceBy}">${aviasquadronSingleData.correctiveActionAcceptanceBy}</td>
-                                        <td th:text="${aviasquadronSingleData.talonClosedBy}">${aviasquadronSingleData.talonClosedBy}</td>
+                                        <td th:text="${aviasquadronSingleData.firstAssistant}">
+                                            ${aviasquadronSingleData.firstAssistant}
+                                        </td>
+                                        <td th:text="${aviasquadronSingleData.pilotFlying}">
+                                            ${aviasquadronSingleData.pilotFlying}
+                                        </td>
+                                        <td th:text="${aviasquadronSingleData.necessaryActions}">
+                                            ${aviasquadronSingleData.necessaryActions}
+                                        </td>
+                                        <td th:text="${aviasquadronSingleData.deadlineOfCorrectiveAction}">
+                                            ${aviasquadronSingleData.deadlineOfCorrectiveAction}
+                                        </td>
+                                        <td th:text="${aviasquadronSingleData.correctiveActionAcceptanceBy}">
+                                            ${aviasquadronSingleData.correctiveActionAcceptanceBy}
+                                        </td>
+                                        <td th:text="${aviasquadronSingleData.talonClosedBy}">
+                                            ${aviasquadronSingleData.talonClosedBy}
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -117,26 +130,35 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <!--  <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventOneForwardRiskEstimate, 'низкий')}">
-                                              <td class="success">${aviasquadronSingleData.eventOne}</td>
-                                              <td class="success">${aviasquadronSingleData.eventOneClassification}</td>
-                                              <td class="success">${aviasquadronSingleData.eventOneForwardRiskEstimate}</td>
-                                          </c:if>
-                                          <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventOneForwardRiskEstimate, 'умеренный')}">
-                                              <td class="warning">${aviasquadronSingleData.eventOne}</td>
-                                              <td class="warning">${aviasquadronSingleData.eventOneClassification}</td>
-                                              <td class="warning">${aviasquadronSingleData.eventOneForwardRiskEstimate}</td>
-                                          </c:if>
-                                          <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventOneForwardRiskEstimate, 'высокий')}">
-                                              <td class="danger">${aviasquadronSingleData.eventOne}</td>
-                                              <td class="danger">${aviasquadronSingleData.eventOneClassification}</td>
-                                              <td class="danger">${aviasquadronSingleData.eventOneForwardRiskEstimate}</td>
-                                          </c:if>
-                                          <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventOneForwardRiskEstimate, 'недопустимый')}">
-                                              <td class="danger">${aviasquadronSingleData.eventOne}</td>
-                                              <td class="danger">${aviasquadronSingleData.eventOneClassification}</td>
-                                              <td class="danger">${aviasquadronSingleData.eventOneForwardRiskEstimate}</td>
-                                          </c:if> -->
+                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate == 'Низкий'}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate == 'Умеренный'}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate == 'Высокий'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}">
+                                            </td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate == 'Недопустимый'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                     <thead>
@@ -148,26 +170,35 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <!--   <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'низкий')}">
-                                               <td class="success">${aviasquadronSingleData.eventTwo}</td>
-                                               <td class="success">${aviasquadronSingleData.eventTwoClassification}</td>
-                                               <td class="success">${aviasquadronSingleData.eventTwoForwardRiskEstimate}</td>
-                                           </c:if>
-                                           <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'умеренный')}">
-                                               <td class="warning">${aviasquadronSingleData.eventTwo}</td>
-                                               <td class="warning">${aviasquadronSingleData.eventTwoClassification}</td>
-                                               <td class="warning">${aviasquadronSingleData.eventTwoForwardRiskEstimate}</td>
-                                           </c:if>
-                                           <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'высокий')}">
-                                               <td class="danger">${aviasquadronSingleData.eventTwo}</td>
-                                               <td class="danger">${aviasquadronSingleData.eventTwoClassification}</td>
-                                               <td class="danger">${aviasquadronSingleData.eventTwoForwardRiskEstimate}</td>
-                                           </c:if>
-                                           <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'недопустимый')}">
-                                               <td class="danger">${aviasquadronSingleData.eventTwo}</td>
-                                               <td class="danger">${aviasquadronSingleData.eventTwoClassification}</td>
-                                               <td class="danger">${aviasquadronSingleData.eventTwoForwardRiskEstimate}</td>
-                                           </c:if> -->
+                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate == 'Низкий'}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate == 'Умеренный'}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate == 'Высокий'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}">
+                                            </td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate == 'Недопустимый'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                     <thead>
@@ -179,26 +210,35 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <!-- <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'низкий')}">
-                                            <td class="success">${aviasquadronSingleData.eventThree}</td>
-                                            <td class="success">${aviasquadronSingleData.eventThreeClassification}</td>
-                                            <td class="success">${aviasquadronSingleData.eventThreeForwardRiskEstimate}</td>
-                                        </c:if>
-                                        <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'умеренный')}">
-                                            <td class="warning">${aviasquadronSingleData.eventThree}</td>
-                                            <td class="warning">${aviasquadronSingleData.eventThreeClassification}</td>
-                                            <td class="warning">${aviasquadronSingleData.eventThreeForwardRiskEstimate}</td>
-                                        </c:if>
-                                        <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'высокий')}">
-                                            <td class="danger">${aviasquadronSingleData.eventThree}</td>
-                                            <td class="danger">${aviasquadronSingleData.eventThreeClassification}</td>
-                                            <td class="danger">${aviasquadronSingleData.eventThreeForwardRiskEstimate}</td>
-                                        </c:if>
-                                        <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'недопустимый')}">
-                                            <td class="danger">${aviasquadronSingleData.eventThree}</td>
-                                            <td class="danger">${aviasquadronSingleData.eventThreeClassification}</td>
-                                            <td class="danger">${aviasquadronSingleData.eventThreeForwardRiskEstimate}</td>
-                                        </c:if> -->
+                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate == 'Низкий'}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate == 'Умеренный'}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate == 'Высокий'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}">
+                                            </td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate == 'Недопустимый'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     <thead>
                                     <tr>
@@ -209,26 +249,35 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <!-- <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventFourForwardRiskEstimate, 'низкий')}">
-                                             <td class="success">${aviasquadronSingleData.eventFour}</td>
-                                             <td class="success">${aviasquadronSingleData.eventFourClassification}</td>
-                                             <td class="success">${aviasquadronSingleData.eventFourForwardRiskEstimate}</td>
-                                         </c:if>
-                                         <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventFourForwardRiskEstimate, 'умеренный')}">
-                                             <td class="warning">${aviasquadronSingleData.eventFour}</td>
-                                             <td class="warning">${aviasquadronSingleData.eventFourClassification}</td>
-                                             <td class="warning">${aviasquadronSingleData.eventFourForwardRiskEstimate}</td>
-                                         </c:if>
-                                         <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventFourForwardRiskEstimate, 'высокий')}">
-                                             <td class="danger">${aviasquadronSingleData.eventFour}</td>
-                                             <td class="danger">${aviasquadronSingleData.eventFourClassification}</td>
-                                             <td class="danger">${aviasquadronSingleData.eventFourForwardRiskEstimate}</td>
-                                         </c:if>
-                                         <c:if test="${fn:containsIgnoreCase(aviasquadronSingleData.eventFourForwardRiskEstimate, 'недопустимый')}">
-                                             <td class="danger">${aviasquadronSingleData.eventFour}</td>
-                                             <td class="danger">${aviasquadronSingleData.eventFourClassification}</td>
-                                             <td class="danger">${aviasquadronSingleData.eventFourForwardRiskEstimate}</td>
-                                         </c:if> -->
+                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate == 'Низкий'}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate == 'Умеренный'}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate == 'Высокий'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}">
+                                            </td>
+                                        </div>
+                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate == 'Недопустимый'}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -269,15 +318,18 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                             <form>
                                 <div class="form-group">
                                     <label for="analysisOfEvents">Анализ</label>
-                                    <textarea class="form-control" rows="3" id="analysisOfEvents" placeholder="Анализ событий полета"></textarea>
+                                    <textarea class="form-control" rows="3" id="analysisOfEvents"
+                                              placeholder="Анализ событий полета"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="correctiveActions">Корректирующие действия</label>
-                                    <textarea class="form-control" rows="3" id="correctiveActions" placeholder="Что было сделано в авиаэскадрильи по данному событию?"></textarea>
+                                    <textarea class="form-control" rows="3" id="correctiveActions"
+                                              placeholder="Что было сделано в авиаэскадрильи по данному событию?"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="responsiblePerson">Ответственное лицо</label>
-                                    <input type="text" class="form-control" id="responsiblePerson" placeholder="Командир эскадрильи или заместитель">
+                                    <input type="text" class="form-control" id="responsiblePerson"
+                                           placeholder="Командир эскадрильи или заместитель">
                                 </div>
                                 <div class="form-group">
                                     <label for="openEventsFile">Открыть материалы</label>
