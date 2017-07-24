@@ -59,7 +59,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 <div class="col-lg-12 col-md-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                           <!-- <p th:text="'Талон обратной связи №' + ${aviasquadronSingleData.incomingNumber}">Талон</p> -->
+                           <p th:text="'Талон обратной связи №' + ${singleEventFlightDepartmentData.incomingNumber}">Талон</p>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -82,18 +82,18 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td th:text="${aviasquadronSingleData.incomingNumber}">dateOfFlight</td>
-                                        <td th:text="${aviasquadronSingleData.flightNumber}">.flightNumber</td>
-                                        <td th:text="${aviasquadronSingleData.departure}">departure}</td>
-                                        <td th:text="${aviasquadronSingleData.arrival}">arrival}</td>
-                                        <td th:text="${aviasquadronSingleData.tailNumber}">tailNumber}</td>
-                                        <td th:text="${aviasquadronSingleData.pilotInCommand}">pilotInCommand}</td>
-                                        <td th:text="${aviasquadronSingleData.firstAssistant}">${aviasquadronSingleData.firstAssistant}</td>
-                                        <td th:text="${aviasquadronSingleData.pilotFlying}">${aviasquadronSingleData.pilotFlying}</td>
-                                        <td th:text="${aviasquadronSingleData.necessaryActions}">${aviasquadronSingleData.necessaryActions}</td>
-                                        <td th:text="${aviasquadronSingleData.deadlineOfCorrectiveAction}">${aviasquadronSingleData.deadlineOfCorrectiveAction}</td>
-                                        <td th:text="${aviasquadronSingleData.correctiveActionAcceptanceBy}">${aviasquadronSingleData.correctiveActionAcceptanceBy}</td>
-                                        <td th:text="${aviasquadronSingleData.talonClosedBy}">${aviasquadronSingleData.talonClosedBy}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.incomingNumber}">dateOfFlight</td>
+                                        <td th:text="${singleEventFlightDepartmentData.flightNumber}">.flightNumber</td>
+                                        <td th:text="${singleEventFlightDepartmentData.departure}">departure}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.arrival}">arrival}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.tailNumber}">tailNumber}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.pilotInCommand}">pilotInCommand}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.firstAssistant}">${aviasquadronSingleData.firstAssistant}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.pilotFlying}">${aviasquadronSingleData.pilotFlying}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.necessaryActions}">${aviasquadronSingleData.necessaryActions}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.deadlineOfCorrectiveAction}">${aviasquadronSingleData.deadlineOfCorrectiveAction}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.correctiveActionAcceptanceBy}">${aviasquadronSingleData.correctiveActionAcceptanceBy}</td>
+                                        <td th:text="${singleEventFlightDepartmentData.talonClosedBy}">${aviasquadronSingleData.talonClosedBy}</td>
                                     </tr>
                                     </tbody>
                                 </table>
