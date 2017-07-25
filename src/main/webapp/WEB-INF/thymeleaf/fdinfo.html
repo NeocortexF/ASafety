@@ -415,12 +415,8 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <div class='input-group date' id='datetimepicker1'>
-                                        <input type='text' class="form-control"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
+                                    <input id="deadline" name="deadline" placeholder="deadline"
+                                           type="date" th:value="${singleEventFlightDepartmentData.deadlineOfCorrectiveAction}">
                                 </div>
                             </form>
                         </div>
@@ -443,14 +439,5 @@ onclick="$('#имя_формы1').submit();$('#имя_формы2').submit();"
 <script type="text/javascript" src="../resources/assets/js/dataTables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="../resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
 <script type="text/javascript" src="../resources/assets/js/custom.js"></script>
-<!-- Time format for date picker -->
-<!--<script type="text/javascript">
-    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-</script>-->
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker();
-    });
-</script>
 </body>
 </html>
