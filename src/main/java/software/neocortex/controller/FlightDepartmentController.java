@@ -65,7 +65,7 @@ public class FlightDepartmentController {
         return "flightdata";
     }
 
-    @RequestMapping("fdinfo/{id}")
+    @RequestMapping("/fdinfo/{id}")
     public String flightDataInfo(@PathVariable("id") int id, Model model) {
         model.addAttribute("singleEventFlightDepartmentData", this.singleEventFlightDepEngineerService.getSingleEventFlightDepEngineerDataById(id));
 
