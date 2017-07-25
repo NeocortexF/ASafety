@@ -134,10 +134,29 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <!-- <tr th:each="row,iterStat  : ${data}" >
+                                         <td th:each="field : ${row}">
+                                             <th:block th:switch="${row.value}">
+                                                 <a th:case="0" href="whatever" th:text="${row.value}" />
+                                                 <a th:case="1" href="whatever" th:text="${row.value}" />
+                                         </th>
+                                         </td>
+                                     </tr> th:switch="${aviasquadronSingleData.eventOneForwardRiskEstimate}-->
                                     <tr id="eventOne">
-                                        <td th:text="${aviasquadronSingleData.eventOne}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventOneClassification}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventOneForwardRiskEstimate, 'Низкий')}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventOneForwardRiskEstimate, 'Умеренный')}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                     <thead>
