@@ -106,7 +106,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     <tbody>
                                     <tr class="gradeA" th:each="data : ${listFlightDepartmentData}">
                                         <td th:text="${data.id}">id</td>
-                                        <td><a href="/fdinfo/" th:href="@{'/fdinfo/' + ${data.incomingNumber}}"
+                                        <td><a href="/fdinfo/" th:href="@{'/fdinfo/' + ${data.id}}"
                                                th:text="${data.incomingNumber}">incomingNumber</a></td>
                                         <td th:text="${data.dateOfFlight}">dateOfFlight</td>
                                         <td th:text="${data.flightNumber}">flightNumber</td>
