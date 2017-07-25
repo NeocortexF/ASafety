@@ -119,7 +119,17 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         <td th:text="${data.pilotFlying}">${data.pilotFlying</td>
                                         <td th:text="${data.aviaEsquadron}">${data.aviaEsquadron</td>
                                         <td th:text="${data.correctiveActionAcceptanceBy}">yes</td>
-                                        <td id="risk" th:text="${data.riskIndex}">riskIndex</td>
+
+                                        <div th:if="${data.riskIndex lt 20}">
+                                            <td class="success" th:text="${data.riskIndex}">riskIndex</td>
+                                        </div>
+                                        <div th:if="${data.riskIndex ge 20 and data.riskIndex lt 100}">
+                                            <td class="warning" th:text="${data.riskIndex}">riskIndex</td>
+                                        </div>
+                                        <div th:if="${data.riskIndex ge 100}">
+                                            <td class="danger" th:text="${data.riskIndex}">riskIndex</td>
+                                        </div>
+
                                         <td th:text="${data.talonClosedBy}">talonClosedBy</td>
                                     </tr>
                                     </tbody>
@@ -133,37 +143,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
     </div>
 </div>
 
-<!-- <script type="text/javascript">
-    function init() {
-        if (arguments.callee.done) return;
-        arguments.callee.done = true;
-        $('.main').show();
-    }
-    ;
-    window.onload = init;
-</script> -->
-<!-- <script type="text/javascript">
-    jQuery('document').ready(function () {
-        document.getElementById("hideAll").style.display = "block";
-    })
-</script> -->
-
-<!-- Table column color in accordance with risk weight -->
-<script type="text/javascript">
-    var table = document.getElementById("dataTable");
-    var rows = table.getElementsByTagName("tr");
-    for (var z = 0; z < rows.length; z++) {
-        if (rows[z].cells[13].innerHTML > 0 && rows[z].cells[13].innerHTML < 20) {
-            rows[z].cells[13].style.backgroundColor = "#cae9bf";
-        } else if (rows[z].cells[13].innerHTML >= 20 && rows[z].cells[13].innerHTML < 100) {
-            rows[z].cells[13].style.backgroundColor = "#fdfcb8";
-        } else if (rows[z].cells[13].innerHTML >= 100 && rows[z].cells[13].innerHTML < 200) {
-            rows[z].cells[13].style.backgroundColor = "#fdc498";
-        } else if (rows[z].cells[13].innerHTML > 200) {
-            rows[z].cells[13].style.backgroundColor = "#ff9f92";
-        }
-    }
-</script>
 <!-- Table columns of corrective action acceptance icons instead of text -->
 <script type="text/javascript">
     var col13 = document.querySelectorAll("#dataTable td:nth-child(13)");

@@ -116,11 +116,19 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         <td th:text="${data.firstAssistant}">firstAssistant</td>
                                         <td th:text="${data.incomingRisk}">incomingRisk</td>
                                         <td th:text="${data.deadlineOfCorrectiveAction}">deadlineOfCorrectiveAction</td>
-                                        <td th:text="${data.correctiveActionAcceptanceBy}">
-                                            correctiveActionAcceptanceBy
-                                        </td>
-                                        <td id="risk" th:text="${data.riskIndex}">riskIndex</td>
-                                        <td th:text="${data.talonClosedBy}">talonClosedBy</td>
+                                        <td th:text="${data.correctiveActionAcceptanceBy}">СА</td>
+
+                                        <div th:if="${data.riskIndex lt 20}">
+                                            <td class="success" th:text="${data.riskIndex}">riskIndex</td>
+                                        </div>
+                                        <div th:if="${data.riskIndex ge 20 and data.riskIndex lt 100}">
+                                            <td class="warning" th:text="${data.riskIndex}">riskIndex</td>
+                                        </div>
+                                        <div th:if="${data.riskIndex ge 100}">
+                                            <td class="danger" th:text="${data.riskIndex}">riskIndex</td>
+                                        </div>
+
+                                        <td th:text="${data.talonClosedBy}">СА</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -132,23 +140,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         </div>
     </div>
 </div>
-
-<!-- Table column color in accordance with risk weight -->
-<script type="text/javascript">
-    var table = document.getElementById("dataTable");
-    var rows = table.getElementsByTagName("tr");
-    for (var z = 0; z < rows.length; z++) {
-        if (rows[z].cells[12].innerHTML > 0 && rows[z].cells[12].innerHTML < 20) {
-            rows[z].cells[12].style.backgroundColor = "#cae9bf";
-        } else if (rows[z].cells[12].innerHTML >= 20 && rows[z].cells[12].innerHTML < 100) {
-            rows[z].cells[12].style.backgroundColor = "#fdfcb8";
-        } else if (rows[z].cells[12].innerHTML >= 100 && rows[z].cells[12].innerHTML < 200) {
-            rows[z].cells[12].style.backgroundColor = "#fdc498";
-        } else if (rows[z].cells[12].innerHTML > 200) {
-            rows[z].cells[12].style.backgroundColor = "#ff9f92";
-        }
-    }
-</script>
 
 <!-- Table columns of corrective action acceptance icons instead of text -->
 <script type="text/javascript">
