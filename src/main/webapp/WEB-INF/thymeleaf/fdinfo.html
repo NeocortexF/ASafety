@@ -352,7 +352,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-primary">
                         <div class="panel-body">
-                            <form class="form-inline" id="upperForm">
+                            <form class="form-horizontal" id="upperForm" action="/eventedit/" method="post">
                                 <div class="form-group">
                                     <label for="commanderId">КВС ID</label>
                                     <input type="text" class="form-control" id="commanderId" placeholder="КВС">
@@ -387,16 +387,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         <option>12</option>
                                     </select>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-body">
-                            <form class="form-inline" id="lowerForm">
                                 <div class="form-group">
                                     <label for="necessaryActions">Необходимые мероприятия</label>
                                     <select class="form-control" id="necessaryActions">
@@ -428,10 +418,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
     <!-- /. PAGE INNER  -->
 </div>
 <!-- /. PAGE WRAPPER  -->
-<!--
- скпипт для отправки нескольких форм одним нажатием
-onclick="$('#имя_формы1').submit();$('#имя_формы2').submit();"
--->
 </div>
 <script type="text/javascript" src="../resources/assets/js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="../resources/assets/js/bootstrap.min.js"></script>
