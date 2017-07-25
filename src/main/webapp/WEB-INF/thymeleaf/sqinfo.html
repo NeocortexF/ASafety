@@ -134,14 +134,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <!-- <tr th:each="row,iterStat  : ${data}" >
-                                         <td th:each="field : ${row}">
-                                             <th:block th:switch="${row.value}">
-                                                 <a th:case="0" href="whatever" th:text="${row.value}" />
-                                                 <a th:case="1" href="whatever" th:text="${row.value}" />
-                                         </th>
-                                         </td>
-                                     </tr> th:switch="${aviasquadronSingleData.eventOneForwardRiskEstimate}-->
                                     <tr id="eventOne">
                                         <div th:if="${#strings.contains(aviasquadronSingleData.eventOneForwardRiskEstimate, 'Низкий')}">
                                             <td class="success" th:text="${aviasquadronSingleData.eventOne}"></td>
@@ -157,6 +149,20 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                             <td class="warning"
                                                 th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
                                         </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventOneForwardRiskEstimate, 'Высокий')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventOneForwardRiskEstimate, 'Недопустимый')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                     <thead>
@@ -168,9 +174,34 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr id="eventTwo">
-                                        <td th:text="${aviasquadronSingleData.eventTwo}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'Низкий')}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'Умеренный')}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'Высокий')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventTwoForwardRiskEstimate, 'Недопустимый')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                     <thead>
@@ -182,9 +213,34 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr id="eventThree">
-                                        <td th:text="${aviasquadronSingleData.eventThree}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'Низкий')}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'Умеренный')}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'Высокий')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventThreeForwardRiskEstimate, 'Недопустимый')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventThree}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     <thead>
                                     <tr>
@@ -195,9 +251,34 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr id="eventFour">
-                                        <td th:text="${aviasquadronSingleData.eventFour}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventFourClassification}"></td>
-                                        <td th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventFourForwardRiskEstimate, 'Низкий')}">
+                                            <td class="success" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="success"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventFourForwardRiskEstimate, 'Умеренный')}">
+                                            <td class="warning" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="warning"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventFourForwardRiskEstimate, 'Высокий')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
+                                        <div th:if="${#strings.contains(aviasquadronSingleData.eventFourForwardRiskEstimate, 'Недопустимый')}">
+                                            <td class="danger" th:text="${aviasquadronSingleData.eventFour}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                            <td class="danger"
+                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
+                                        </div>
                                     </tr>
                                     </tbody>
                                 </table>
