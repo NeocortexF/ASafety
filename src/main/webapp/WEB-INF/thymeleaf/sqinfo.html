@@ -129,36 +129,10 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate eq 'Низкий'}">
-                                            <td class="success" th:text="${aviasquadronSingleData.eventOne}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate eq 'Умеренный'}">
-                                            <td class="warning" th:text="${aviasquadronSingleData.eventOne}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate eq 'Высокий'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventOne}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}">
-                                            </td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventOneForwardRiskEstimate eq 'Недопустимый'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventOne}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventOneClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
-                                        </div>
+                                    <tr id="eventOne"> <!-- Низкий  Умеренный Высокий Недопустимый-->
+                                            <td th:text="${aviasquadronSingleData.eventOne}"></td>
+                                            <td th:text="${aviasquadronSingleData.eventOneClassification}"></td>
+                                            <td th:text="${aviasquadronSingleData.eventOneForwardRiskEstimate}"></td>
                                     </tr>
                                     </tbody>
                                     <thead>
@@ -169,36 +143,10 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate eq 'Низкий'}">
-                                            <td class="success" th:text="${aviasquadronSingleData.eventTwo}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate eq 'Умеренный'}">
-                                            <td class="warning" th:text="${aviasquadronSingleData.eventTwo}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate eq 'Высокий'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventTwo}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}">
-                                            </td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventTwoForwardRiskEstimate eq 'Недопустимый'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventTwo}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
-                                        </div>
+                                    <tr id="eventTwo">
+                                        <td th:text="${aviasquadronSingleData.eventTwo}"></td>
+                                        <td th:text="${aviasquadronSingleData.eventTwoClassification}"></td>
+                                        <td th:text="${aviasquadronSingleData.eventTwoForwardRiskEstimate}"></td>
                                     </tr>
                                     </tbody>
                                     <thead>
@@ -209,36 +157,10 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate eq 'Низкий'}">
-                                            <td class="success" th:text="${aviasquadronSingleData.eventThree}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate eq 'Умеренный'}">
-                                            <td class="warning" th:text="${aviasquadronSingleData.eventThree}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate eq 'Высокий'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventThree}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}">
-                                            </td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventThreeForwardRiskEstimate eq 'Недопустимый'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventThree}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
-                                        </div>
+                                    <tr id="eventThree">
+                                        <td th:text="${aviasquadronSingleData.eventThree}"></td>
+                                        <td th:text="${aviasquadronSingleData.eventThreeClassification}"></td>
+                                        <td th:text="${aviasquadronSingleData.eventThreeForwardRiskEstimate}"></td>
                                     </tr>
                                     <thead>
                                     <tr>
@@ -248,36 +170,10 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate eq 'Низкий'}">
-                                            <td class="success" th:text="${aviasquadronSingleData.eventFour}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
-                                            <td class="success"
-                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate eq 'Умеренный'}">
-                                            <td class="warning" th:text="${aviasquadronSingleData.eventFour}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
-                                            <td class="warning"
-                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate eq 'Высокий'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventFour}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}">
-                                            </td>
-                                        </div>
-                                        <div th:if="${aviasquadronSingleData.eventFourForwardRiskEstimate eq 'Недопустимый'}">
-                                            <td class="danger" th:text="${aviasquadronSingleData.eventFour}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventFourClassification}"></td>
-                                            <td class="danger"
-                                                th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
-                                        </div>
+                                    <tr id="eventFour">
+                                        <td th:text="${aviasquadronSingleData.eventFour}"></td>
+                                        <td th:text="${aviasquadronSingleData.eventFourClassification}"></td>
+                                        <td th:text="${aviasquadronSingleData.eventFourForwardRiskEstimate}"></td>
                                     </tr>
                                     </tbody>
                                 </table>
