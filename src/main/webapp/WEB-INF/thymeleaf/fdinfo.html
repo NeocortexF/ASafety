@@ -350,29 +350,78 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
             <hr/>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-primary">
                         <div class="panel-body">
-                            <form>
+                            <form class="form-inline" id="upperForm">
                                 <div class="form-group">
-                                    <label for="analysisOfEvents">Анализ</label>
-                                    <textarea class="form-control" rows="3" id="analysisOfEvents"
-                                              placeholder="Анализ событий полета"></textarea>
+                                    <label for="commanderId">КВС ID</label>
+                                    <input type="text" class="form-control" id="commanderId" placeholder="КВС">
                                 </div>
                                 <div class="form-group">
-                                    <label for="correctiveActions">Корректирующие действия</label>
-                                    <textarea class="form-control" rows="3" id="correctiveActions"
-                                              placeholder="Что было сделано в авиаэскадрильи по данному событию?"></textarea>
+                                    <label for="firstOfficerId">ВП ID</label>
+                                    <input type="text" class="form-control" id="firstOfficerId" placeholder="ВП">
                                 </div>
                                 <div class="form-group">
-                                    <label for="responsiblePerson">Ответственное лицо</label>
-                                    <input type="text" class="form-control" id="responsiblePerson"
-                                           placeholder="Командир эскадрильи или заместитель">
+                                    <label for="pilotFlying">Пилотирующий</label>
+                                    <select class="form-control" id="pilotFlying">
+                                        <option></option>
+                                        <option>КВС</option>
+                                        <option>ВП</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="openEventsFile">Открыть материалы</label>
-                                    <input type="file" id="openEventsFile">
+                                    <label for="squadron">№ АЭ</label>
+                                    <select class="form-control" id="squadron">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <form class="form-inline" id="lowerForm">
+                                <div class="form-group">
+                                    <label for="necessaryActions">Необходимые мероприятия</label>
+                                    <select class="form-control" id="necessaryActions">
+                                        <option></option>
+                                        <option>Анализ в АЭ</option>
+                                        <option>Служебное расследование в ЛО</option>
+                                        <option>Расследование в ИБП</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="controlledBy">Контроль</label>
+                                    <select class="form-control" id="controlledBy">
+                                        <option></option>
+                                        <option>Командир ЛО</option>
+                                        <option>Зам. командира</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -383,12 +432,25 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
     <!-- /. PAGE INNER  -->
 </div>
 <!-- /. PAGE WRAPPER  -->
+<!--
+ скпипт для отправки нескольких форм одним нажатием
+onclick="$('#имя_формы1').submit();$('#имя_формы2').submit();"
+-->
 </div>
-<script src="../resources/assets/js/jquery-1.10.2.js"></script>
-<script src="../resources/assets/js/bootstrap.min.js"></script>
-<script src="../resources/assets/js/jquery.metisMenu.js"></script>
-<script src="../resources/assets/js/dataTables/jquery.dataTables.js"></script>
-<script src="../resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
-<script src="../resources/assets/js/custom.js"></script>
+<script type="text/javascript" src="../resources/assets/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../resources/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../resources/assets/js/jquery.metisMenu.js"></script>
+<script type="text/javascript" src="../resources/assets/js/dataTables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="../resources/assets/js/custom.js"></script>
+<!-- Time format for date picker -->
+<!--<script type="text/javascript">
+    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+</script>-->
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+</script>
 </body>
 </html>
