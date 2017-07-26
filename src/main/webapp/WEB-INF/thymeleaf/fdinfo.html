@@ -353,7 +353,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                     <div class="panel panel-primary">
                         <div class="panel-body">
                             <form id="upperForm" action="/eventedit/" method="post">
-                                <div class="form-inline">
+                                <div class="form-inline col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label for="commanderId">КВС ID</label>
                                         <input type="text" class="form-control" id="commanderId" placeholder="КВС">
@@ -390,7 +390,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </div>
                                 </div>
                                 <br/>
-                                <div class="form-inline">
+                                <div class="form-horizontal">
                                     <div class="form-group">
                                         <label for="necessaryActions">Необходимые мероприятия</label>
                                         <select class="form-control" id="necessaryActions">
@@ -408,12 +408,11 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                             <option>Зам. командира</option>
                                         </select>
                                     </div>
-                                </div>
-                                <br/>
-                                <div class="form-group">
-                                    <input id="deadline" name="deadline" placeholder="deadline"
-                                           type="date"
-                                           th:value="${singleEventFlightDepartmentData.deadlineOfCorrectiveAction}">
+                                    <div class="form-group">
+                                        <input id="deadline" name="deadline" placeholder="deadline"
+                                               type="date"
+                                               th:value="${singleEventFlightDepartmentData.deadlineOfCorrectiveAction}">
+                                    </div>
                                 </div>
                             </form>
                         </div>

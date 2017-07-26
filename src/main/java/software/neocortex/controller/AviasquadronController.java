@@ -58,7 +58,7 @@ public class AviasquadronController {
     }
 
     @RequestMapping(value = "/sqinfo/update", method = RequestMethod.POST)
-    public String updateSingleAviasquadronData(@ModelAttribute("singleAviasquadronData") SingleSquadronModel singleSquadronModel) {
+    public String updateSingleAviasquadronData(@ModelAttribute("aviasquadronSingleData") SingleSquadronModel singleSquadronModel) {
         if(singleSquadronModel.getId() == 0) {
             this.singleSquadronService.addSingleSquadronData(singleSquadronModel);
         } else {
