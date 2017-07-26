@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import software.neocortex.model.FlightDepartmentData;
+import software.neocortex.model.SingleEventModelFlightDepEngineer;
 import software.neocortex.service.FlightDepartmentDataService;
 import software.neocortex.service.SingleEventFlightDepEngineerService;
 
@@ -70,5 +71,16 @@ public class FlightDepartmentController {
         model.addAttribute("singleEventFlightDepartmentData", this.singleEventFlightDepEngineerService.getSingleEventFlightDepEngineerDataById(id));
 
         return "fdinfo";
+    }
+
+    @RequestMapping(value = "/fdinfo/update", method = RequestMethod.POST)
+    public String updateSingleAviasquadronData(@ModelAttribute("singleEventFlightDepartmentData") SingleEventModelFlightDepEngineer singleEventFlightDepartmentData) {
+        if(singleEventFlightDepartmentData.getId() == 0) {
+            this.singleEventFlightDepEngineerService.addSingleEventFlightDepEngineerData(singleEventFlightDepartmentData);
+        } else {
+            this.singleEventFlightDepEngineerService.updateSingleEventFlightDepEngineerData(singleEventFlightDepartmentData);
+        }
+
+        return "redirect:/flightdata";
     }
 }
