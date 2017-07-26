@@ -316,21 +316,70 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <form action="#" th:action="@{/sqinfo/update/}" th:object="${aviasquadronSingleData}" method="post">
+                            <form action="#" th:action="@{/sqinfo/update/}" th:object="${aviasquadronSingleData}"
+                                  method="post">
+                                <input type="hidden" name="id" th:value="${aviasquadronSingleData.id}">
+                                <input type="hidden" name="incomingNumber"
+                                       th:value="${aviasquadronSingleData.incomingNumber}">
+                                <input type="hidden" name="flightNumber"
+                                       th:value="${aviasquadronSingleData.flightNumber}">
+                                <input type="hidden" name="departure" th:value="${aviasquadronSingleData.departure}">
+                                <input type="hidden" name="arrival" th:value="${aviasquadronSingleData.arrival}">
+                                <input type="hidden" name="tailNumber" th:value="${aviasquadronSingleData.tailNumber}">
+                                <input type="hidden" name="pilotInCommand"
+                                       th:value="${aviasquadronSingleData.pilotInCommand}">
+                                <input type="hidden" name="firstAssistant"
+                                       th:value="${aviasquadronSingleData.firstAssistant}">
+                                <input type="hidden" name="pilotFlying"
+                                       th:value="${aviasquadronSingleData.pilotFlying}">
+                                <input type="hidden" name="necessaryActions"
+                                       th:value="${aviasquadronSingleData.necessaryActions}">
+                                <input type="hidden" name="deadlineOfCorrectiveAction"
+                                       th:value="${aviasquadronSingleData.deadlineOfCorrectiveAction}">
+                                <input type="hidden" name="correctiveActionAcceptanceBy"
+                                       th:value="${aviasquadronSingleData.correctiveActionAcceptanceBy}">
+                                <input type="hidden" name="talonClosedBy"
+                                       th:value="${aviasquadronSingleData.talonClosedBy}">
+                                <input type="hidden" name="eventOne" th:value="${aviasquadronSingleData.eventOne}">
+                                <input type="hidden" name="eventOneClassification"
+                                       th:value="${aviasquadronSingleData.eventOneClassification}">
+                                <input type="hidden" name="eventOneForwardRiskEstimate"
+                                       th:value="${aviasquadronSingleData.eventOneForwardRiskEstimate}">
+                                <input type="hidden" name="eventTwo" th:value="${aviasquadronSingleData.eventTwo}">
+                                <input type="hidden" name="eventTwoClassification"
+                                       th:value="${aviasquadronSingleData.eventTwoClassification}">
+                                <input type="hidden" name="eventTwoForwardRiskEstimate"
+                                       th:value="${aviasquadronSingleData.eventTwoForwardRiskEstimate}">
+                                <input type="hidden" name="eventThree" th:value="${aviasquadronSingleData.eventThree}">
+                                <input type="hidden" name="eventThreeClassification"
+                                       th:value="${aviasquadronSingleData.eventThreeClassification}">
+                                <input type="hidden" name="eventThreeForwardRiskEstimate"
+                                       th:value="${aviasquadronSingleData.eventThreeForwardRiskEstimate}">
+                                <input type="hidden" name="eventFour" th:value="${aviasquadronSingleData.eventFour}">
+                                <input type="hidden" name="eventFourClassification"
+                                       th:value="${aviasquadronSingleData.eventFourClassification}">
+                                <input type="hidden" name="eventFourForwardRiskEstimate"
+                                       th:value="${aviasquadronSingleData.eventFourForwardRiskEstimate}">
+                                <input type="hidden" name="remarks" th:value="${aviasquadronSingleData.remarks}">
+                                <input type="hidden" name="feedbackFromFlightDepartment"
+                                       th:value="${aviasquadronSingleData.feedbackFromFlightDepartment}">
                                 <div class="form-group">
                                     <label for="analysisOfEvents">Анализ</label>
                                     <textarea class="form-control" rows="3" id="analysisOfEvents"
-                                              placeholder="Анализ событий полета" th:text="${aviasquadronSingleData.analysis}"></textarea>
+                                              placeholder="Анализ событий полета"
+                                              th:field="${aviasquadronSingleData.analysis}"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="correctiveActions">Корректирующие действия</label>
                                     <textarea class="form-control" rows="3" id="correctiveActions"
-                                              placeholder="Что было сделано в АЭ по данному событию?" th:text="${aviasquadronSingleData.correctiveAction}"></textarea>
+                                              placeholder="Что было сделано в АЭ по данному событию?"
+                                              th:field="${aviasquadronSingleData.correctiveAction}"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="responsiblePerson">Ответственное лицо</label>
                                     <input type="text" class="form-control" id="responsiblePerson"
-                                           placeholder="Командир эскадрильи или заместитель" th:value="${aviasquadronSingleData.squadronChief}">
+                                           placeholder="Командир эскадрильи или заместитель"
+                                           th:field="${aviasquadronSingleData.squadronChief}">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Отправить</button>
                             </form>

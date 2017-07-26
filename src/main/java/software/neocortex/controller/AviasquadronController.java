@@ -65,6 +65,6 @@ public class AviasquadronController {
             this.singleSquadronService.updateSingleSquadronData(singleSquadronModel);
         }
 
-        return "redirect:/sqinfo";
+        return "redirect:/squadrondata";
     }
 }
