@@ -228,6 +228,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                                 th:text="${singleEventFlightDepartmentData.eventThreeForwardRiskEstimate}"></td>
                                         </div>
                                     </tr>
+                                    </tbody>
                                     <thead>
                                     <tr>
                                         <th>Событие 4</th>
@@ -352,28 +353,89 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-primary">
                         <div class="panel-body">
-                            <form action="#" th:action="@{/fdinfo/update/}" th:object="${singleEventFlightDepartmentData}"
+                            <form action="#" th:action="@{/fdinfo/update/}"
+                                  th:object="${singleEventFlightDepartmentData}"
                                   method="post">
+                                <input type="hidden" name="id" th:value="${singleEventFlightDepartmentData.id}">
+                                <input type="hidden" name="incomingNumber"
+                                       th:value="${singleEventFlightDepartmentData.incomingNumber}">
+                                <input type="hidden" name="dateOfProcessing"
+                                       th:value="${singleEventFlightDepartmentData.dateOfProcessing}">
+                                <input type="hidden" name="dateOfFlight"
+                                       th:value="${singleEventFlightDepartmentData.dateOfFlight}">
+                                <input type="hidden" name="tailNumber"
+                                       th:value="${singleEventFlightDepartmentData.tailNumber}">
+                                <input type="hidden" name="flightNumber"
+                                       th:value="${singleEventFlightDepartmentData.flightNumber}">
+                                <input type="hidden" name="departure"
+                                       th:value="${singleEventFlightDepartmentData.departure}">
+                                <input type="hidden" name="arrival"
+                                       th:value="${singleEventFlightDepartmentData.arrival}">
+                                <input type="hidden" name="eventOne"
+                                       th:value="${singleEventFlightDepartmentData.eventOne}">
+                                <input type="hidden" name="eventOneClassification"
+                                       th:value="${singleEventFlightDepartmentData.eventOneClassification}">
+                                <input type="hidden" name="eventOneForwardRiskEstimate"
+                                       th:value="${singleEventFlightDepartmentData.eventOneForwardRiskEstimate}">
+                                <input type="hidden" name="eventTwo"
+                                       th:value="${singleEventFlightDepartmentData.eventTwo}">
+                                <input type="hidden" name="eventTwoClassification"
+                                       th:value="${singleEventFlightDepartmentData.eventTwoClassification}">
+                                <input type="hidden" name="eventTwoForwardRiskEstimate"
+                                       th:value="${singleEventFlightDepartmentData.eventTwoForwardRiskEstimate}">
+                                <input type="hidden" name="eventThree"
+                                       th:value="${singleEventFlightDepartmentData.eventThree}">
+                                <input type="hidden" name="eventThreeClassification"
+                                       th:value="${singleEventFlightDepartmentData.eventThreeClassification}">
+                                <input type="hidden" name="eventThreeForwardRiskEstimate"
+                                       th:value="${singleEventFlightDepartmentData.eventThreeForwardRiskEstimate}">
+                                <input type="hidden" name="eventFour"
+                                       th:value="${singleEventFlightDepartmentData.eventFour}">
+                                <input type="hidden" name="eventFourClassification"
+                                       th:value="${singleEventFlightDepartmentData.eventFourClassification}">
+                                <input type="hidden" name="eventFourForwardRiskEstimate"
+                                       th:value="${singleEventFlightDepartmentData.eventFourForwardRiskEstimate}">
+                                <input type="hidden" name="remarks"
+                                       th:value="${singleEventFlightDepartmentData.remarks}">
+                                <input type="hidden" name="analysis"
+                                       th:value="${singleEventFlightDepartmentData.analysis}">
+                                <input type="hidden" name="correctiveAction"
+                                       th:value="${singleEventFlightDepartmentData.correctiveAction}">
+                                <input type="hidden" name="correctiveAction"
+                                       th:value="${singleEventFlightDepartmentData.dateOfAnalysis}">
+                                <input type="hidden" name="correctiveAction"
+                                       th:value="${singleEventFlightDepartmentData.squadronChief}">
+
                                 <div class="form-inline col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label for="commanderId">КВС ID</label>
-                                        <input type="text" class="form-control" id="commanderId" placeholder="КВС">
+                                        <input type="text" class="form-control" id="commanderId" placeholder="КВС"
+                                               th:field="${singleEventFlightDepartmentData.pilotInCommand}">
                                     </div>
                                     <div class="form-group">
                                         <label for="firstOfficerId">ВП ID</label>
-                                        <input type="text" class="form-control" id="firstOfficerId" placeholder="ВП">
+                                        <input type="text" class="form-control" id="firstOfficerId" placeholder="ВП"
+                                               th:field="${singleEventFlightDepartmentData.firstAssistant}">
                                     </div>
+                                    <!-- <div class="form-group">
+                                        <label for="pilotFlying">Пилотирующий</label>
+                                        <select class="form-control" id="pilotFlying"
+                                                th:field="${singleEventFlightDepartmentData.pilotFlying}">
+                                            <option></option>
+                                            <option th:if="${singleEventFlightDepartmentData.pilotFlying eq 'КВС'}" th:text="'КВС'">КВС</option>
+                                            <option th:if="${singleEventFlightDepartmentData.pilotFlying eq '2П'}" th:text="'2П'">2П</option>
+                                        </select>
+                                    </div> -->
                                     <div class="form-group">
                                         <label for="pilotFlying">Пилотирующий</label>
-                                        <select class="form-control" id="pilotFlying">
-                                            <option></option>
-                                            <option>КВС</option>
-                                            <option>ВП</option>
+                                        <select class="form-control" id="pilotFlying" name="pilot">
+                                            <option th:each="pilot : ${singleEventFlightDepartmentData.pilotFlying}" th:value="${singleEventFlightDepartmentData.pilotFlying}" th:text="${singleEventFlightDepartmentData.pilotFlying}">KVS</option>
                                         </select>
                                     </div>
-                                    <div class="form-group">
+                                   <!-- <div class="form-group">
                                         <label for="squadron">№ АЭ</label>
-                                        <select class="form-control" id="squadron">
+                                        <select class="form-control" id="squadron"
+                                                th:field="${singleEventFlightDepartmentData.aviasquadronNumber}">
                                             <option></option>
                                             <option>1</option>
                                             <option>2</option>
@@ -394,7 +456,8 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                 <div class="form-horizontal">
                                     <div class="form-group">
                                         <label for="necessaryActions">Необходимые мероприятия</label>
-                                        <select class="form-control" id="necessaryActions">
+                                        <select class="form-control" id="necessaryActions"
+                                                th:field="${singleEventFlightDepartmentData.necessaryActions}">
                                             <option></option>
                                             <option>Анализ в АЭ</option>
                                             <option>Служебное расследование в ЛО</option>
@@ -403,17 +466,18 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </div>
                                     <div class="form-group">
                                         <label for="controlledBy">Контроль</label>
-                                        <select class="form-control" id="controlledBy">
+                                        <select class="form-control" id="controlledBy"
+                                                th:field="${singleEventFlightDepartmentData.controlledBy}">
                                             <option></option>
                                             <option>Командир ЛО</option>
                                             <option>Зам. командира</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <input id="deadline" name="deadline" placeholder="deadline"
+                                        <input id="deadline" name="deadline" placeholder="Срок КД"
                                                type="date"
-                                               th:value="${singleEventFlightDepartmentData.deadlineOfCorrectiveAction}">
-                                    </div>
+                                               th:field="${singleEventFlightDepartmentData.deadlineOfCorrectiveAction}">
+                                    </div> -->
                                 </div>
                             </form>
                         </div>
