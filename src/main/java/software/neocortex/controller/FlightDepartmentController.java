@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import software.neocortex.enumerator.PilotFlyingKey;
 import software.neocortex.model.FlightDepartmentData;
 import software.neocortex.model.SingleEventModelFlightDepEngineer;
 import software.neocortex.service.FlightDepartmentDataService;
@@ -67,8 +68,9 @@ public class FlightDepartmentController {
     }
 
     @RequestMapping("/fdinfo/{id}")
-    public String flightDataInfo(@PathVariable("id") int id, Model model) {
+    public String flightDataInfo(@PathVariable("id") int id, PilotFlyingKey pilotFlyingKey, Model model) {
         model.addAttribute("singleEventFlightDepartmentData", this.singleEventFlightDepEngineerService.getSingleEventFlightDepEngineerDataById(id));
+        model.addAttribute("pilotFlyingKey", pilotFlyingKey);
 
         return "fdinfo";
     }

@@ -15,4 +15,5 @@ public interface FlightDepartmentDataService {
     FlightDepartmentData getFlightDepartmentDataById(int id);
 
     List<FlightDepartmentData> listFlightDepartmentData();
+
 }
