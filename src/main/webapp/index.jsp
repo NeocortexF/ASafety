@@ -12,5 +12,7 @@
 <a href="<c:url value="/squadrondata"/>" target="_blank">Squadron data</a>
 <br/>
 <a href="<c:url value="/processdata"/>" target="_blank">Engineering data</a>
+<br/>
+<a href="<c:url value="/airports"/>" target="_blank">airports</a>
 </body>
 </html>

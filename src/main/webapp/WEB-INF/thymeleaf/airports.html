@@ -11,11 +11,6 @@
     <link href="resources/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet"/>
     <link href="resources/assets/css/custom.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <script type="text/javascript" src="resources/assets/js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="resources/assets/js/jquery.metisMenu.js"></script>
-    <script type="text/javascript" src="resources/assets/js/dataTables/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -43,13 +38,13 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                     <img src="/resources/assets/img/newfb28.png" class="user-image img-responsive"/>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-table fa-3x"></i> События</a>
+                    <a href="flightdata.html"><i class="fa fa-table fa-3x"></i> События ЛО</a>
                 </li>
                 <li>
-                    <a href="ui.html"><i class="fa fa-edit fa-3x"></i> Сообщения</a>
+                    <a href="squadrondata.html"><i class="fa fa-edit fa-3x"></i> События Эскадрилий</a>
                 </li>
                 <li>
-                    <a href="tab-panel.html"><i class="active-menu fa fa-sitemap fa-3x"></i> Настройки<span class="fa arrow"></span></a>
+                    <a href="tab-panel.html"><i class="active-menu fa fa-sitemap fa-3x"></i> Справочники<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="airports.html">Аэропорты</a>
@@ -87,58 +82,25 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Перечень событий
+                           Аэропорты
                         </div>
                         <div class="panel-body">
-                            <div class="table-responsive" th:if="${not #lists.isEmpty(listFlightDepartmentData)}">
+                            <div class="table-responsive" th:if="${not #lists.isEmpty(listAirports)}">
                                 <table class="table table-striped table-bordered table-hover" id="dataTable">
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Вх. №</th>
-                                        <th>Дата полета</th>
-                                        <th>№ рейса</th>
-                                        <th>Взлет</th>
-                                        <th>Посадка</th>
-                                        <th>Бортовой номер</th>
-                                        <th>Event</th>
-                                        <th>КВС</th>
-                                        <th>ВП</th>
-                                        <th>PF</th>
-                                        <th>АЕ</th>
-                                        <th>КД одобрены</th>
-                                        <th>Индекс риска</th>
-                                        <th>Закрыт</th>
+                                        <th>Название аэропорта</th>
+                                        <th>Код ИКАО</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="gradeA" th:each="data : ${listFlightDepartmentData}">
+                                    <tr class="gradeA" th:each="data : ${listAirports}">
                                         <td th:text="${data.id}">id</td>
-                                        <td><a href="/fdinfo/" th:href="@{'/fdinfo/' + ${data.id}}"
-                                               th:text="${data.incomingNumber}">incomingNumber</a></td>
-                                        <td th:text="${data.dateOfFlight}">dateOfFlight</td>
-                                        <td th:text="${data.flightNumber}">flightNumber</td>
-                                        <td th:text="${data.departure}">departure</td>
-                                        <td th:text="${data.arrival}">arrival</td>
-                                        <td th:text="${data.tailNumber}">tailNumber</td>
-                                        <td th:text="${data.mainEventNumber}">mainEventNumber</td>
-                                        <td th:text="${data.pilotInCommand}">pilotInCommand</td>
-                                        <td th:text="${data.firstAssistant}">${data.firstAssistant</td>
-                                        <td th:text="${data.pilotFlying}">${data.pilotFlying</td>
-                                        <td th:text="${data.aviaEsquadron}">${data.aviaEsquadron</td>
-                                        <td th:text="${data.correctiveActionAcceptanceBy}">yes</td>
-
-                                        <div th:if="${data.riskIndex lt 20}">
-                                            <td class="success" th:text="${data.riskIndex}">riskIndex</td>
-                                        </div>
-                                        <div th:if="${data.riskIndex ge 20 and data.riskIndex lt 100}">
-                                            <td class="warning" th:text="${data.riskIndex}">riskIndex</td>
-                                        </div>
-                                        <div th:if="${data.riskIndex ge 100}">
-                                            <td class="danger" th:text="${data.riskIndex}">riskIndex</td>
-                                        </div>
-
-                                        <td th:text="${data.talonClosedBy}">talonClosedBy</td>
+                                       <!-- <td><a href="/fdinfo/" th:href="@{'/fdinfo/' + ${data.id}}"
+                                               th:text="${data.incomingNumber}">incomingNumber</a></td> -->
+                                        <td th:text="${data.airportName}">dateOfFlight</td>
+                                        <td th:text="${data.airportIcaoCode}">flightNumber</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -150,41 +112,11 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
         </div>
     </div>
 </div>
-
-<!-- Table columns of corrective action acceptance icons instead of text -->
-<script type="text/javascript">
-    var col13 = document.querySelectorAll("#dataTable td:nth-child(13)");
-    [].forEach.call(col13, function (elem) {
-        if (elem.textContent.replace(/\s/g, "").length > 0) {
-            elem.innerHTML =
-                '<img src="/resources/assets/img/OK.png">';
-        } else {
-            elem.innerHTML =
-                '<img src="/resources/assets/img/Error.png">';
-        }
-    });
-</script>
-<!-- Table columns of talon closing icons instead of text -->
-<script type="text/javascript">
-    var col15 = document.querySelectorAll("#dataTable td:nth-child(15)");
-    [].forEach.call(col15, function (elem) {
-        if (elem.textContent.replace(/\s/g, "").length > 0) {
-            elem.innerHTML =
-                '<img src="/resources/assets/img/OK.png">';
-        } else {
-            elem.innerHTML =
-                '<img src="/resources/assets/img/Error.png">';
-        }
-    });
-</script>
-
-<!-- Data Table pagination script -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#dataTable').dataTable();
-    });
-</script>
-
+<script type="text/javascript" src="resources/assets/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/assets/js/jquery.metisMenu.js"></script>
+<script type="text/javascript" src="resources/assets/js/dataTables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
 <!-- CUSTOM SCRIPTS -->
 <script type="text/javascript" src="resources/assets/js/custom.js"></script>
 </body>
