@@ -88,7 +88,7 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td th:text="${aviasquadronSingleData.incomingNumber}">dateOfFlight</td>
+                                        <td th:text="${aviasquadronSingleData.dateOfFlight}">dateOfFlight</td>
                                         <td th:text="${aviasquadronSingleData.flightNumber}">.flightNumber</td>
                                         <td th:text="${aviasquadronSingleData.departure}">departure}</td>
                                         <td th:text="${aviasquadronSingleData.arrival}">arrival}</td>
@@ -319,6 +319,8 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                             <form action="#" th:action="@{/sqinfo/update/}" th:object="${aviasquadronSingleData}"
                                   method="post">
                                 <input type="hidden" name="id" th:value="${aviasquadronSingleData.id}">
+                                <input type="hidden" name="dateOfFlight"
+                                       th:value="${aviasquadronSingleData.dateOfFlight}">
                                 <input type="hidden" name="incomingNumber"
                                        th:value="${aviasquadronSingleData.incomingNumber}">
                                 <input type="hidden" name="flightNumber"
@@ -393,7 +395,6 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 </div>
 <!-- /. PAGE WRAPPER  -->
 </div>
-
 <!-- CUSTOM SCRIPTS -->
 <script type="text/javascript" src="../resources/assets/js/custom.js"></script>
 </body>
