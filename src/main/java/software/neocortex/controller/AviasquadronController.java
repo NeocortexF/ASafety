@@ -38,18 +38,6 @@ public class AviasquadronController {
         return "squadrondata";
     }
 
-    // TODO не должно быть на весь лист
-    @RequestMapping(value = "/squadrondata/add", method = RequestMethod.POST)
-    public String addAviasquadronData(@ModelAttribute("aviasquadronData") AviasquadronData aviasquadronData) {
-        if(aviasquadronData.getId() == 0) {
-            this.aviasquadronDataService.addAviasquadronData(aviasquadronData);
-        } else {
-            this.aviasquadronDataService.updateAviasquadronData(aviasquadronData);
-        }
-
-        return "redirect:/squadrondata";
-    }
-
     @RequestMapping(value = "/sqinfo/{id}")
     public String aviasquadronDataInfo(@PathVariable("id") int id, Model model) {
         model.addAttribute("aviasquadronSingleData", this.singleSquadronService.getSingleSquadronDataById(id));
