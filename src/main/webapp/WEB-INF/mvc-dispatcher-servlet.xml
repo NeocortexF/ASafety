@@ -191,6 +191,16 @@
     </bean>
 
     <!-- ========================================== -->
+    <!-- Dao and Service beans for Statistics -->
+    <bean id="statisticDao" class="software.neocortex.dao.implementation.StatisticDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id = "statisticService" class="software.neocortex.service.implementation.StatisticServiceImpl">
+        <property name="statisticDAO" ref="statisticDao"/>
+    </bean>
+
+    <!-- ========================================== -->
     <!-- Options -->
     <context:component-scan base-package="software.neocortex"/>
 
@@ -205,6 +215,5 @@
                    cache-period="31556926"/>
 
     <mvc:default-servlet-handler/>
-
 
 </beans>

@@ -27,8 +27,6 @@ public class StatisticDaoImpl implements StatisticDAO {
         Session session = this.sessionFactory.getCurrentSession();
         List<StatisticModel> listOfRisk = session.createQuery("SELECT Risk_index, COUNT(*) FROM flightdata GROUP BY Risk_index").list();
         logger.info("Data from database was received for risk statistics");
-        System.out.println("------------------------------------------------------------------");
-        System.out.println(listOfRisk.toString());
 
         return listOfRisk;
     }
