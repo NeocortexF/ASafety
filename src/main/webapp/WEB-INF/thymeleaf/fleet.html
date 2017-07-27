@@ -94,10 +94,10 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                     </thead>
                                     <tbody>
                                     <tr class="gradeA" th:each="data : ${listFleet}">
-                                        <td th:text="${data.id}">id</td>
+                                        <td th:text="${data.id}"></td>
                                         <!-- <td><a href="/fdinfo/" th:href="@{'/fdinfo/' + ${data.id}}"
                                                 th:text="${data.incomingNumber}">incomingNumber</a></td> -->
-                                        <td th:text="${data.tailNumber}">dateOfFlight</td>
+                                        <td th:text="${data.tailNumber}"></td>
                                     </tr>
                                     </tbody>
                                 </table>
