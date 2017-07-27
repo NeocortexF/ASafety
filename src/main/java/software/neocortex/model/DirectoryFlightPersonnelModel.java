@@ -4,7 +4,7 @@ package software.neocortex.model;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "personnel")
 public class DirectoryFlightPersonnelModel {
 
     @Id

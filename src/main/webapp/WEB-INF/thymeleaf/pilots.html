@@ -101,7 +101,9 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
                                         <!-- <td><a href="/fdinfo/" th:href="@{'/fdinfo/' + ${data.id}}"
                                                 th:text="${data.incomingNumber}">incomingNumber</a></td> -->
                                         <td th:text="${data.name}"></td>
-
+                                        <td th:text="${data.staffNumber}"></td>
+                                        <td th:text="${data.squadronNumber}"></td>
+                                        <td th:text="${data.position}"></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -119,6 +121,12 @@ font-size: 16px;"> Добро пожаловать e.shamkin &nbsp; <a href="#" 
 <script type="text/javascript" src="resources/assets/js/dataTables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="resources/assets/js/dataTables/dataTables.bootstrap.js"></script>
 <!-- CUSTOM SCRIPTS -->
+<!-- Data Table pagination script -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#dataTable').dataTable();
+    });
+</script>
 <script type="text/javascript" src="resources/assets/js/custom.js"></script>
 </body>
 </html>
