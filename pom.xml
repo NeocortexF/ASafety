@@ -144,7 +144,7 @@
                 <scope>test</scope>
             </dependency>
 
-            <!--MysQL-->
+            <!--MySQL-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
